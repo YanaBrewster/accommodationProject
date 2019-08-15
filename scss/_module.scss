@@ -1,0 +1,154 @@
+#datePicker1{
+  border-radius: 5px;
+  border-color: $blue;
+}
+
+#datePicker2{
+  border-radius: 5px;
+  border-color: $blue;
+}
+
+.banner-search {
+	position: relative;
+	width: 100vw;
+	height: 60vh;
+	background-image: url("images/auckland.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.banner-search-overlay{
+  @include align-center;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  background-color: hsla(0, 0%, 20%, 0.6);
+  width: 60%;
+  padding: 2.5%;
+  padding-top: 3%;
+}
+
+@media (max-width: 575px) {
+  .banner-search{
+    height: 70vh;
+    background-image: url('images/aucklandCu.jpg');
+  }
+  .banner-search-overlay{
+    @include align-center;
+    position: absolute;
+    top: 15%;
+  }
+}
+
+// DATE PICKER
+
+.ui-datepicker {
+    width: 305px;
+    height: 305px;
+    margin: 5px auto 0;
+    font: 16px 'IBM Plex Sans', sans-serif;
+}
+
+    .ui-datepicker table {
+        width: 100%;
+    }
+
+.ui-datepicker-header {
+    background: white;
+    color: $blue;
+    font-family:'IBM Plex Sans', sans-serif;
+    border-width: 0 0 0 0;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 1em;
+
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+    background-position: center -30px;
+}
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+    background-position: center 0px;
+}
+
+.ui-datepicker thead {
+    background-color: white;
+}
+
+.ui-datepicker th {
+    background-color:$blue;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+}
+
+.ui-datepicker tbody td {
+    padding: 0px;
+}
+
+    .ui-datepicker tbody td:last-child {
+        border-right: 0px;
+    }
+
+.ui-datepicker tbody tr {
+    border-bottom: 0px;
+}
+
+    .ui-datepicker tbody tr:last-child {
+        border-bottom: 0px;
+    }
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+      background: white;
+      color: $secondary;
+      border: solid 1px $blue;
+      border-radius: 5px;
+      margin: 1px;
+      height:35px;
+      width:35px;
+
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background: $blue;
+    color: white;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: $secondary;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: $blue;
+    border: 2px solid $blue;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    background: white;
+    color: #000;
+}

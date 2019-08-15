@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+  <title>Kiwi Getaway</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-primary justify-content-center">
+    <div class="navbar-brand mb-0"><h1>Kiwi Getaway</h1></div>
+  </nav>
+
+  <div id="searchBar" class="row">
+    <div class="col">
+      <div class="banner-search">
+        <div class="banner-search-overlay">
+          <div class="row">
+            <div class="col-lg col-sm-12 justify-content-center">
+              <div class="form-group">
+                <div class=" text-dark bg-white border border-primary rounded">
+                  <select class="form-control place" id="city">
+                    <option>Destination</option>
+                    <option class="auckland">Auckland</option>
+                    <option class="wellington">Wellington</option>
+                    <option class="queenstown">Queenstown</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-sm-12 justify-content-center">
+              <div class="form-group">
+                <div class=" text-dark bg-white border border-primary rounded">
+                <select class="form-control travellers" id="travellers">
+                  <option value="travellers">No. of travellers</option>
+                  <option value="1" class="trv1">1</option>
+                  <option value="2" class="trv2">2</option>
+                  <option value="3" class="trv3">3</option>
+                  <option value="4" class="trv4">4</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mt-2 mb-2 justify-content-center">
+              <input type="text" placeholder=" Check in date" id="datePicker1">
+            </div>
+            <div class="col mt-2 mb-2 justify-content-center">
+              <input type="text" placeholder=" Check out date"  id="datePicker2">
+            </div>
+            <div class="col-12 col-lg mb-2">
+              <input type="submit" name="submit" value="Search" id="search" class="btn btn-lg btn-primary text-white"></div>
+            </div>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS PAGE -->
+    <div id="resultsPage">
+        <h3 class="text-center mt-4 mt-b">Search Results</h3>
+      <div id="searchResults">
+
+      </div>
+      <div id="placeDetails" class="row equal">
+
+      </div>
+    </div>
+
+    <!-- CHECKOUT PAGE -->
+    <div id="checkoutPage">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <div class="mb-4 mt-4 pt-4 pb-4 pr-4 pl-4 border border-primary rounded">
+              <h3 class="text-primary">Booking Summary</h3>
+              <span id="cost"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Meal Option</h3>
+        <div id="mealOption" class="row equal">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="breakfast" id="breakfast1" value="option1">
+            <label class="form-check-label" for="breakfast1">
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="breakfast" id="breakfast2" value="option2">
+            <label class="form-check-label" for="breakfast2">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 col-md-12 mt-4">
+            <h3 class="mb-4">Make your booking</h3>
+            <form method="post" id="checkoutForm" onSubmit="return validation();">
+              <div class="form-group">
+                <div class="form-group">
+                  <label class="font-weight-bold">Full Name</label><br>
+                  <input type="text" name="name" id="fullName" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="Enter Full Name">
+                </div>
+                <label class="font-weight-bold">Email</label>
+                <div class="input-group mb-4">
+                  <input type="email" name="email" id="email" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="Enter Email Address">
+                  <div class="input-group-append"><button type="button" class="btn btn-primary" onClick="return emailCheck();"><i class="fa fa-envelope text-white"></i></button></div>
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold">Phone Number</label><br>
+                  <input type="text" name="phone" id="phone" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="(000)-(0000000)">
+                </div>
+                <div class="form-group float-right">
+                  <input type="submit" name="submit" value="Confirm Booking"  class="btn btn-primary text-white">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- BOOKING CONFIRMED PAGE -->
+    <div id="confirmedPage">
+      <div class="container mr-2 ml-2">
+        <div>
+          <div class="mb-4 mt-4 pt-4 pb-4 col-12 col-sm-12 border border-primary rounded text-center">
+            <h3 class="text-primary">Booking Confirmed</h3>
+            <p>Thank you for booking your stay with us, we look forward to your visit.<br>You can pay for your room on arrival with eftpos or credit card.
+            </p>
+            <button type="button" id="home" class="btn btn-primary text-white">Make Another Booking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDESHOW -->
+
+    <div id="slideshow">
+      <div class="owl-carousel owl-theme">
+        <div class="item"><img src="css/images/aucklandcity.jpg" alt="Auckland City landscape"></div>
+        <div class="item"><img src="css/images/Skywalk-Auckland.jpg" alt="woman on Skywalk Auckland"></div>
+        <div class="item"><img src="css/images/wellingtoncity.jpg" alt="Wellngton City landscape"></div>
+        <div class="item"><img src="css/images/wellingtonhobbiton.jpg" alt="Hobbiton in Wellington"></div>
+        <div class="item"><img src="css/images/queenstown.jpg" alt="Queenstown landscape"></div>
+        <div class="item"><img src="css/images/queenstownski.jpg" alt="Skiing in Queenstown"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="navbar bg-secondary justify-content-center mt-4">
+      <div class="navbar-brand text-white"><p>Supported by Tourism New Zealand</p></div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"> </script>
+    <script src="plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"> </script>
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>

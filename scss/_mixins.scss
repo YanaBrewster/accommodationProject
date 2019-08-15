@@ -1,0 +1,11 @@
+@mixin clear(){
+	clear: both;
+	content: '';
+	display: table;
+}
+
+
+@mixin align-center{
+    text-align: center;
+    margin:0 auto;
+}

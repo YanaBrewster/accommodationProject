@@ -38,7 +38,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "QTExterior-Wellington.jpg",
-        photo: "QTRoom-Wellington.jpg"
+        photo: "QTRoom-Wellington.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 2,
@@ -70,7 +71,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "corpthorneExterior-Wellington.jpg",
-        photo: "corpthorneRoom-Wellington.jpg"
+        photo: "corpthorneRoom-Wellington.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 3,
@@ -102,7 +104,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "ibisExterior-Wellington.jpg",
-        photo: "ibisRoom-Wellington.jpg"
+        photo: "ibisRoom-Wellington.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 4,
@@ -134,7 +137,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "CopthorneHotelExterior-Auckland.jpg",
-        photo: "CopthorneHotelRoom-Auckland.jpg"
+        photo: "CopthorneHotelRoom-Auckland.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 5,
@@ -166,7 +170,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "rydgesExterior-Auckland.jpg",
-        photo: "rydgesRoom-Auckland.jpg"
+        photo: "rydgesRoom-Auckland.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 6,
@@ -198,7 +203,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "SKYCITYHotelAucklandExterior.jpg",
-        photo: "SKYCITYHotelAucklandRoom.jpg"
+        photo: "SKYCITYHotelAucklandRoom.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 7,
@@ -230,7 +236,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "HeartlandHotelQueenstownExterior.jpg",
-        photo: "HeartlandHotelQueenstownRoom.jpg"
+        photo: "HeartlandHotelQueenstownRoom.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 8,
@@ -262,7 +269,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "RydgesLakelandResortQueenstownExterior.jpg",
-        photo: "RydgesLakelandResortQueenstownRoom.jpg"
+        photo: "RydgesLakelandResortQueenstownRoom.jpg",
+        accommodation: "Hotel"
       },
       {
         id: 9,
@@ -294,7 +302,8 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "",
-        photo: "NovotelQueenstownLakesideroom.jpg"
+        photo: "NovotelQueenstownLakesideroom.jpg",
+        accommodation: "Hotel"
       }
     ]
   },
@@ -331,7 +340,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "apolloMotelExterior-Wellington.jpg",
-        photo: "apolloMotelRoom-Wellington.jpg"
+        photo: "apolloMotelRoom-Wellington.jpg",
+        accommodation: "Motel"
       },
       {
         id: 11,
@@ -359,7 +369,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "capitalViewMotorInnExterior-Wellington.jpg",
-        photo: "capitalViewMotorInnRoom-Wellington.jpg"
+        photo: "capitalViewMotorInnRoom-Wellington.jpg",
+        accommodation: "Motel"
       },
       {
         id: 12,
@@ -391,7 +402,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "marksmenMotorInnExterior-Wellington.jpg",
-        photo: "marksmenMotorInnRoom-Wellington.jpg"
+        photo: "marksmenMotorInnRoom-Wellington.jpg",
+        accommodation: "Motel"
       },
 
       {
@@ -420,7 +432,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "GreenLaneMotelExterior-Auckland.jpg",
-        photo: "GreenLaneMotelRoom-Auckland.jpg"
+        photo: "GreenLaneMotelRoom-Auckland.jpg",
+        accommodation: "Motel"
       },
 
       {
@@ -453,7 +466,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "TudorCourtMotorLodgeExterior-Auckland.jpg",
-        photo: "TudorCourtMotorLodgeRoom-Auckland.jpg"
+        photo: "TudorCourtMotorLodgeRoom-Auckland.jpg",
+        accommodation: "Motel"
       },
       {
         id: 15,
@@ -485,7 +499,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "NewHavenMotelExterior-Auckland.jpg",
-        photo: "NewHavenMotelRoom-Auckland.jpg"
+        photo: "NewHavenMotelRoom-Auckland.jpg",
+        accommodation: "Motel"
       },
       {
         id: 16,
@@ -517,7 +532,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "",
-        photo: "AutolineMotelRoom.jpg"
+        photo: "AutolineMotelRoom.jpg",
+        accommodation: "Motel"
       },
       {
         id: 17,
@@ -549,7 +565,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "",
-        photo: "AmberLodgeMotelRoom.jpg"
+        photo: "AmberLodgeMotelRoom.jpg",
+        accommodation: "Motel"
       },
       {
         id: 18,
@@ -581,7 +598,8 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "",
-        photo: "ColonialVillageMotelQueenstownRoom.jpg"
+        photo: "ColonialVillageMotelQueenstownRoom.jpg",
+        accommodation: "Motel"
       }
     ]
   },
@@ -618,7 +636,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "balconySuiteExterior-Wellington.jpg",
-        photo: "balconySuiteRoom-Wellington.jpg"
+        photo: "balconySuiteRoom-Wellington.jpg",
+        accommodation: "House"
       },
       {
         id: 20,
@@ -646,7 +665,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "cityfringetownhouseExterior-Wellington.jpg",
-        photo: "cityfringetownhouseRoom-Wellington.jpg"
+        photo: "cityfringetownhouseRoom-Wellington.jpg",
+        accommodation: "House"
       },
       {
         id: 21,
@@ -670,7 +690,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "parkMewsExterior-Wellington.jpg",
-        photo: "parkMewsRoom-Wellington.jpg"
+        photo: "parkMewsRoom-Wellington.jpg",
+        accommodation: "House"
       },
       {
         id: 22,
@@ -702,7 +723,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "JuanPlaceExterior-Auckland.jpg",
-        photo: "JuanPlaceRoom-Auckland.jpg"
+        photo: "JuanPlaceRoom-Auckland.jpg",
+        accommodation: "House"
       },
       {
         id: 23,
@@ -726,7 +748,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "HostedbyEveliinaExterior-Auckland.jpg",
-        photo: "HostedbyEveliinaRoom-Auckland.jpg"
+        photo: "HostedbyEveliinaRoom-Auckland.jpg",
+        accommodation: "House"
       },
       {
         id: 24,
@@ -750,7 +773,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "nadiaExterior-Auckland.jpg",
-        photo: "nadiaRoom-Auckland.jpg"
+        photo: "nadiaRoom-Auckland.jpg",
+        accommodation: "House"
       },
       {
         id: 25,
@@ -778,7 +802,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "",
-        photo: "Shannon&MiaRoom.JPG"
+        photo: "Shannon&MiaRoom.JPG",
+        accommodation: "House"
       },
       {
         id: 26,
@@ -802,7 +827,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "",
-        photo: "SantoshRoom.jpg"
+        photo: "SantoshRoom.jpg",
+        accommodation: "House"
       },
       {
         id: 27,
@@ -834,7 +860,8 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "",
-        photo: "KatRoom.JPG"
+        photo: "KatRoom.JPG",
+        accommodation: "House"
       },
     ]
   },
@@ -871,7 +898,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "yhaExterior-Wellington.jpg",
-        photo: "yhaRoom-Wellington.jpg"
+        photo: "yhaRoom-Wellington.jpg",
+        accommodation: "Hostel"
       },
 
       {
@@ -900,7 +928,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "HotelWaterlooBackpackersExterior-Wellington.jpg",
-        photo: "HotelWaterlooBackpackersRoom-Wellington.jpg"
+        photo: "HotelWaterlooBackpackersRoom-Wellington.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 30,
@@ -932,7 +961,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "nomadsCapitalBackpackersExterior-Wellington.jpg",
-        photo: "nomadsCapitalBackpackersRoom-Wellington.jpg"
+        photo: "nomadsCapitalBackpackersRoom-Wellington.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 31,
@@ -960,7 +990,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "HakaLodgeAucklandExterior.jpg",
-        photo: "HakaLodgeAucklandRoom.jpg"
+        photo: "HakaLodgeAucklandRoom.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 32,
@@ -988,7 +1019,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "ymcaExterior-Auckland.jpg",
-        photo: "ymcaRoom-Auckland.jpg"
+        photo: "ymcaRoom-Auckland.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 33,
@@ -1016,7 +1048,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "QueenStreetBackpackersExterior - Auckland.jpg",
-        photo: "QueenStreetBackpackersRoom- Auckland.jpg"
+        photo: "QueenStreetBackpackersRoom- Auckland.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 34,
@@ -1044,7 +1077,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "",
-        photo: "NomadsQueenstownBackpackersRoom.jpg"
+        photo: "NomadsQueenstownBackpackersRoom.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 35,
@@ -1072,7 +1106,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "",
-        photo: "YHAQueenstownCentralRoom.jpg"
+        photo: "YHAQueenstownCentralRoom.jpg",
+        accommodation: "Hostel"
       },
       {
         id: 36,
@@ -1104,7 +1139,8 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "",
-        photo: "BaseQueenstownRoom.jpg"
+        photo: "BaseQueenstownRoom.jpg",
+        accommodation: "Hostel"
       }
     ]
   }
@@ -1112,10 +1148,10 @@ var allPlaces = [
 
 // FILTER SEARCH BAR IN JQUERY
 
-var city, travellers, days;
+var city, accommodation, travellers, days;
 
 $(document).ready(function(){
-
+  // CITY
   $(".auckland").click(function(){
     city = "auckland";
     console.log(city);
@@ -1129,7 +1165,24 @@ $(document).ready(function(){
     city = "queenstown";
     console.log(city);
   });
-
+  //ACCOMMODATION
+  $(".hotel").click(function(){
+    accommodation = "hotel";
+    console.log(accommodation);
+  });
+  $(".motel").click(function(){
+    accommodation = "motel";
+    console.log(accommodation);
+  });
+  $(".house").click(function(){
+    accommodation = "house";
+    console.log(accommodation);
+  });
+  $(".hostel").click(function(){
+    accommodation = "hostel";
+    console.log(accommodation);
+  });
+  // TRAVELLERS
   $(".trv1").click(function(){
     travellers = 1;
     console.log(travellers);
@@ -1161,207 +1214,218 @@ $(document).ready(function(){
 
     dateDiff();
 
-    getPlaces(travellers, days, city);
+    getPlaces(travellers, accommodation, days, city);
 
   });
+
+
 
   // FILTER/VALIDATION FUNCTION IN JS
 
-  function getPlaces(t, d, c){
-    var checker = false;
-        $("#searchResults").empty();
-    placesCards.innerHTML =" ";
-    for (var i = 0 ; i < allPlaces.length ; i ++) {
-      for (var j = 0 ; j < allPlaces[i].places.length ; j ++) {
 
-        if (( t >= allPlaces[i].places[j].sleeps.minPeople) && ( t <= allPlaces[i].places[j].sleeps.maxPeople)) {
-          if (( d >= allPlaces[i].places[j].sleeps.minLength) && ( d <= allPlaces[i].places[j].sleeps.maxLength)) {
-            if ( c == allPlaces[i].places[j].location) {
-              checker = true;
-              // SUCCESSFUL VALIDATION
-              var total = d * allPlaces[i].places[j].price ;
 
-              placesCards.innerHTML += "<div class=\"col-12 col-lg-6 col-sm-12 col-md-6 mb-2 mt-4\">" +
-              "<div class=\"border-primary card h-100 mr-4 ml-4\">" +
-              "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
-              "<img src=\"css/images/" + allPlaces[i].places[j].photo + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-3\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block\">" +  allPlaces[i].places[j].description + "</div><div class=\"pt-2 d-block\"><br><h4>Type</h4> "+  allPlaces[i].type + "<br><br><h4>Amenities</h4>" +  allPlaces[i].places[j].amenities + "</div><br><h4>Address</h4>" +  allPlaces[i].places[j].address + "<h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white show-more mb-4\"' onclick='calcCost(" + total + ", " + d +")'>Reserve</a></div></div>";
-            }
-          }
-        }
-      }//loop j fin
-    }//loop i fin
+ function getPlaces(t, a, d, c){
+   var checker = false;
+       $("#searchResults").empty();
+   placesCards.innerHTML =" ";
+   for (var i = 0 ; i < allPlaces.length ; i ++) {
 
-    // UNSUCCESSFUL VALIDATION
-    if (checker == false){
+     for (var j = 0 ; j < allPlaces[i].places.length ; j ++) {
 
-      $("#searchResults").html("<div class=\"col-12 text-center py-5\"><h4>Search was unsuccessful, we could not find accommodation that matches your search requirements.</h4></div>");
+       if (( t >= allPlaces[i].places[j].sleeps.minPeople) && ( t <= allPlaces[i].places[j].sleeps.maxPeople)) {
+         if (( d >= allPlaces[i].places[j].sleeps.minLength) && ( d <= allPlaces[i].places[j].sleeps.maxLength)) {
+           if ( c == allPlaces[i].places[j].location) {
+             if ( a == allPlaces[i].places[j].accomm) {
+             checker = true;
+             // SUCCESSFUL VALIDATION
+             var total = d * allPlaces[i].places[j].price ;
+
+             placesCards.innerHTML += "<div class=\"col-12 col-lg-6 col-sm-12 col-md-6 mb-2 mt-4\">" +
+             "<div class=\"border-primary card h-100 mr-4 ml-4\">" +
+             "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
+             "<img src=\"css/images/" + allPlaces[i].places[j].photo + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-3\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block\">" +  allPlaces[i].places[j].description + "</div><div class=\"pt-2 d-block\"><br><h4>Type</h4> "+  allPlaces[i].type + "<br><br><h4>Amenities</h4>" +  allPlaces[i].places[j].amenities + "</div><br><h4>Address</h4>" +  allPlaces[i].places[j].address + "<h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white show-more mb-4\"' onclick='calcCost(" + total + ", " + d +")'>Reserve</a></div></div>";
+           }
+         }
+       }
+     }
+     }//loop j fin
+
+   }//loop i fin
+
+   // UNSUCCESSFUL VALIDATION
+   if (checker == false){
+
+     $("#searchResults").html("<div class=\"col-12 text-center py-5\"><h4>Search was unsuccessful, we could not find accommodation that matches your search requirements.</h4></div>");
+   }
+ }
+});
+
+  // CALCULATE COSTS AND DISPLAY IN JS
+
+  function calcCost (totalCost, days) {
+    document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " day/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
+  }
+
+  // MEAL DATA/OBJECT IN JS
+
+  var breakfast = [
+    {
+      name:  "Continential Breakfast",
+      description: "Juice, coffee or tea with museli and toast",
+      image: "continentialbreakfast.jpg"
+    },
+    {
+      name: "Full Cooked Breakfast",
+      description: "Eggs with tomato, bacon, sausage, and toast",
+      image: "bigbreakfast.jpg"
     }
-  }
-});
+  ]
 
-// CALCULATE COSTS AND DISPLAY IN JS
+  // SHOW MEAL OPTIONS IN JQUERY/JS
 
-function calcCost (totalCost, days) {
-  document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " day/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
-}
+  $(document).ready(function(){
 
-// MEAL DATA/OBJECT IN JS
-
-var breakfast = [
-  {
-    name:  "Continential Breakfast",
-    description: "Juice, coffee or tea with museli and toast",
-    image: "continentialbreakfast.jpg"
-  },
-  {
-    name: "Full Cooked Breakfast",
-    description: "Eggs with tomato, bacon, sausage, and toast",
-    image: "bigbreakfast.jpg"
-  }
-]
-
-// SHOW MEAL OPTIONS IN JQUERY/JS
-
-$(document).ready(function(){
-
-  breakfastCards.innerHTML = " ";
-  var x;
-  for (x = 0 ; x < breakfast.length ; x ++) {
+    breakfastCards.innerHTML = " ";
+    var x;
+    for (x = 0 ; x < breakfast.length ; x ++) {
 
 
-    breakfastCards.innerHTML += "<div class=\"col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mt-4\">" +
-    "<div class=\"border-primary card h-100\">" + "<div class=\"h-100\"><img src=\"css/images/" + breakfast[x].image + "\"class=\"card-img-top mb-2\" \"alt=\"breakfast option\">" + "<div class=\"card-body px-4\"><h4>" + breakfast[x].name + "</h4><br><p>" + breakfast[x].description + "</p> <div class=\" pb-4 float-right form-check\"><input class=\"form-check-input breakfast bg-primary\" type=\"radio\" name=\"breakfast\" value=\"option\"><label class=\"form-check-label\" for=\"breakfast\"></label></div></div>";
-  }
-});
+      breakfastCards.innerHTML += "<div class=\"col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mt-4\">" +
+      "<div class=\"border-primary card h-100\">" + "<div class=\"h-100\"><img src=\"css/images/" + breakfast[x].image + "\"class=\"card-img-top mb-2\" \"alt=\"breakfast option\">" + "<div class=\"card-body px-4\"><h4>" + breakfast[x].name + "</h4><br><p>" + breakfast[x].description + "</p> <div class=\" pb-4 float-right form-check\"><input class=\"form-check-input breakfast bg-primary\" type=\"radio\" name=\"breakfast\" value=\"option\"><label class=\"form-check-label\" for=\"breakfast\"></label></div></div>";
+    }
+  });
 
 
-// DATE PICKER FUNCTION IN JQUERY WITH JQUERY UI
+  // DATE PICKER FUNCTION IN JQUERY WITH JQUERY UI
 
-$("#datePicker1").datepicker({
-  dateFormat: "yy-mm-dd",
-  changeMonth: true,
-  minDate: new Date(),
-  maxDate: "+1Y",
-  onSelect: function(date){
+  $("#datePicker1").datepicker({
+    dateFormat: "yy-mm-dd",
+    changeMonth: true,
+    minDate: new Date(),
+    maxDate: "+1Y",
+    onSelect: function(date){
 
-    var selectedDate = new Date(date);
-    var msecsInADay = 86400000;
-    var stDate = new Date(selectedDate.getTime() + msecsInADay);
-    console.log(stDate);
+      var selectedDate = new Date(date);
+      var msecsInADay = 86400000;
+      var stDate = new Date(selectedDate.getTime() + msecsInADay);
+      console.log(stDate);
 
 
-    $("#datePicker2").datepicker( "option", "minDate", stDate );
-    var enDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
+      $("#datePicker2").datepicker( "option", "minDate", stDate );
+      var enDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
 
-    $("#datePicker2").datepicker( "option", "maxDate", enDate );
+      $("#datePicker2").datepicker( "option", "maxDate", enDate );
 
-  }
-});
+    }
+  });
 
-$("#datePicker2").datepicker({
-  dateFormat: "yy-mm-dd",
-  changeMonth: true,
-});
+  $("#datePicker2").datepicker({
+    dateFormat: "yy-mm-dd",
+    changeMonth: true,
+  });
 
-// CHECKOUT FORM VALIDATION IN JQUERY
+  // CHECKOUT FORM VALIDATION IN JQUERY
 
-function emailCheck(){
-  if($("#email").val()==""){
-    $("#email").addClass("is-invalid");
-    return false;
-  }else{
-    var regMail     =   /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
-    if(regMail.test($("#email").val()) == false){
+  function emailCheck(){
+    if($("#email").val()==""){
       $("#email").addClass("is-invalid");
       return false;
     }else{
-      $("#email").removeClass("is-invalid");
-      $("#next-form").collapse("show");
+      var regMail     =   /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+      if(regMail.test($("#email").val()) == false){
+        $("#email").addClass("is-invalid");
+        return false;
+      }else{
+        $("#email").removeClass("is-invalid");
+        $("#next-form").collapse("show");
+      }
+
+    }
+  }
+  function validation(){
+    if($("#fullName, #phone").val()==""){
+      $("#fullName, #phone").addClass("is-invalid");
+      return false;
+
+    }else{
+      $("#fullName, #phone").removeClass("is-invalid");
     }
 
   }
-}
-function validation(){
-  if($("#fullName, #phone").val()==""){
-    $("#fullName, #phone").addClass("is-invalid");
-    return false;
+  $(document).ready(function() {
+    $("#fullName").on("keyup",function(){
+      if($("#fullName").val()==""){
+        $("#fullName").addClass("is-invalid");
+        return false;
+      }else{
+        $("#fullName").removeClass("is-invalid");
+      }
+    });
+    $("#phone").on("keyup",function(){
+      if($("#phone").val()==""){
+        $("#phone").addClass("is-invalid");
+        return false;
+      }else{
+        $("#phone").removeClass("is-invalid");
+      }
+    });
 
-  }else{
-    $("#fullName, #phone").removeClass("is-invalid");
-  }
-
-}
-$(document).ready(function() {
-  $("#fullName").on("keyup",function(){
-    if($("#fullName").val()==""){
-      $("#fullName").addClass("is-invalid");
-      return false;
-    }else{
-      $("#fullName").removeClass("is-invalid");
-    }
-  });
-  $("#phone").on("keyup",function(){
-    if($("#phone").val()==""){
-      $("#phone").addClass("is-invalid");
-      return false;
-    }else{
-      $("#phone").removeClass("is-invalid");
-    }
   });
 
-});
+  // DISPLAY PAGES IN JQUERY
 
-// DISPLAY PAGES IN JQUERY
+  $(document).ready(function(){
 
-$(document).ready(function(){
-
-  $("#searchBar").ready(function(){
-    $("#checkoutPage").hide();
-    $("#confirmedPage").hide();
-    $("#resultsPage").hide();
-
-    $("#search").click(function(){
-      $("#resultsPage").show();
+    $("#searchBar").ready(function(){
       $("#checkoutPage").hide();
       $("#confirmedPage").hide();
+      $("#resultsPage").hide();
 
-      $(".show-more").click(function(){
-        $("#resultsPage").hide();
-        $("#checkoutPage").show();
-        $("#confirmedPage").hide();
-        $("#searchBar").hide();
-        $("#slideshow").hide();
-        $("#slideshow").hide();
-        $(".googleMap").hide();
-      });
-      $("#confirm").click(function(){
-        $("#resultsPage").hide();
-        $("#checkoutPage").hide();
-        $("#confirmedPage").show();
-        $("#searchBar").hide();
-        $("#slideshow").hide();
-        $(".googleMap").hide();
-      });
-      $("#home").click(function(){
-        $("#searchBar").show();
-        $("#slideshow").show();
-        $("#resultsPage").hide();
+      $("#search").click(function(){
+        $("#resultsPage").show();
         $("#checkoutPage").hide();
         $("#confirmedPage").hide();
+
+        $(".show-more").click(function(){
+          $("#resultsPage").hide();
+          $("#checkoutPage").show();
+          $("#confirmedPage").hide();
+          $("#searchBar").hide();
+          $("#slideshow").hide();
+          $("#slideshow").hide();
+          $(".googleMap").hide();
+        });
+        $("#confirm").click(function(){
+          $("#resultsPage").hide();
+          $("#checkoutPage").hide();
+          $("#confirmedPage").show();
+          $("#searchBar").hide();
+          $("#slideshow").hide();
+          $(".googleMap").hide();
+        });
+        $("#home").click(function(){
+          $("#searchBar").show();
+          $("#slideshow").show();
+          $("#resultsPage").hide();
+          $("#checkoutPage").hide();
+          $("#confirmedPage").hide();
+        });
       });
     });
   });
-});
 
-// 3RD PARTY PLUGIN IN JQUERY
+  // 3RD PARTY PLUGIN IN JQUERY
 
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+  });
 
-$(".owl-carousel").owlCarousel({
-  items:1,
-  margin:10,
-  autoHeight:false,
-  animateOut: "fadeOut"
-});
+  $(".owl-carousel").owlCarousel({
+    items:1,
+    margin:10,
+    autoHeight:false,
+    animateOut: "fadeOut"
+  });
+
+
+  // POP UP

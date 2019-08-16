@@ -23,7 +23,7 @@
   @include align-center;
   border-radius: 5px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 20%;
   background-color: hsla(0, 0%, 20%, 0.6);
   width: 60%;
@@ -39,7 +39,7 @@
   .banner-search-overlay{
     @include align-center;
     position: absolute;
-    top: 15%;
+    top: 10%;
   }
 }
 

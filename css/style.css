@@ -7614,6 +7614,47 @@ h4 {
 p {
   font-family: 'IBM Plex Sans', sans-serif; }
 
+.hotelThumb:hover {
+  opacity: 0.5;
+  cursor: pointer; }
+
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  color: #33CCFF;
+  z-index: 100000000; }
+
+#close:hover {
+  color: #333333;
+  cursor: pointer; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center; }
+
+body, html {
+  /* overflow: hidden; */ }
+
+.overlayContent {
+  width: 80vw;
+  max-height: 100vh;
+  height: 100vh;
+  background-color: white;
+  position: relative; }
+
+#roomImage {
+  max-height: 100%; }
+
 #datePicker1 {
   border-radius: 5px;
   border-color: #33CCFF; }
@@ -7636,7 +7677,7 @@ p {
   margin: 0 auto;
   border-radius: 5px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 20%;
   background-color: rgba(51, 51, 51, 0.6);
   width: 60%;
@@ -7652,7 +7693,7 @@ p {
     text-align: center;
     margin: 0 auto;
     position: absolute;
-    top: 15%; } }
+    top: 10%; } }
 .ui-datepicker {
   width: 305px;
   height: 305px;
@@ -7763,7 +7804,7 @@ p {
   margin: 0 auto;
   border-radius: 5px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 20%;
   background-color: rgba(51, 51, 51, 0.6);
   width: 60%;
@@ -7779,7 +7820,7 @@ p {
     text-align: center;
     margin: 0 auto;
     position: absolute;
-    top: 15%; } }
+    top: 10%; } }
 .ui-datepicker {
   width: 305px;
   height: 305px;

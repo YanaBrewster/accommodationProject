@@ -467,7 +467,7 @@ var allPlaces = [
           maxPeople: 4
         },
         amenities: ["Free Wi-Fi", " Parking — Free", " Airport shuttle", " Good for kids"],
-        location: "Wellington",
+        location: "Auckland",
         address: "3162 Great North Road, Kelston, New Lynn, Auckland",
         nearby: [
           {
@@ -1187,8 +1187,6 @@ $(document).ready(function(){
 
   // FILTER/VALIDATION FUNCTION IN JS
 
-
-
  function getPlaces(t, a, d, c){
    var checker = false;
        $("#searchResults").empty();
@@ -1208,7 +1206,7 @@ $(document).ready(function(){
              placesCards.innerHTML += "<div class=\"col-12 col-lg-4 col-sm-12 col-md-6 mb-2 mt-4\">" +
              "<div class=\"border-primary card accommThumb h-100 mr-4 ml-4\">" +
              "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
-             "<img src=\"css/images/" + allPlaces[i].places[j].photo + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-3\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"showMore("+ allPlaces[i].places[j].id +")\">View More</div>";
+             "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-3\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"showMore("+ allPlaces[i].places[j].id +")\">View More</div>";
            }
          }
        }
@@ -1224,6 +1222,54 @@ $(document).ready(function(){
    }
  }
 });
+
+// POP UP
+
+function showMore(placeNumber){
+var singlePlace;
+console.log("place clicked");
+console.log(placeNumber);
+  for (var i = 0; i < allPlaces.length; i++) {
+       for (var j = 0 ; j < allPlaces[i].places.length ; j ++) {
+
+        if (allPlaces[i].places[j].id === placeNumber) {
+          console.log(allPlaces[i].places[j].id);
+            singlePlace = allPlaces[i];
+            break;
+      }
+    }
+  }
+   document.getElementById('photo').src = 'css/images/'+ singlePlace.places[j].photo;
+   document.getElementById('name').innerText =  singlePlace.places[j].name;
+   document.getElementById('stars').src = 'css/images/'+ singlePlace.places[j].stars;
+   document.getElementById('description').innerHTML = singlePlace.places[j].description;
+   document.getElementById('amenities').innerText = singlePlace.places[j].amenities;
+   document.getElementById('location').innerText = singlePlace.places[j].location;
+   document.getElementById('address').innerText = singlePlace.places[j].address;
+   document.getElementById('nearby').innerHTML = '';
+    for (var i = 0; i < singlePlace.places[j].nearby[i].length; i++) {
+        document.getElementById('nearby').innerHTML += '<li class="list-inline-item">'+ singlePlace.places[j].nearby[i] +'</li>';
+    }
+   document.getElementById('price').innerText = singlePlace.places[j].price;
+
+  document.getElementById('accommPopUp').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+var accommThumbnails = document.getElementsByClassName('accommThumb');
+for (var i = 0; i < accommThumbnails.length; i++) {
+var id = parseInt(accommThumbnails[i].dataset.id);
+accommThumbnails[i].onclick = function(){
+  var id= parseInt(this.dataset.id);
+  showMore(id);
+};
+}
+
+document.getElementById('close').onclick = function () {
+document.getElementById('accomPopUp').style.display = 'none';
+document.body.style.overflow = 'scroll';
+};
+
 
   // CALCULATE COSTS AND DISPLAY IN JS
 
@@ -1391,48 +1437,3 @@ $(document).ready(function(){
     autoHeight:false,
     animateOut: "fadeOut"
   });
-
-
-  // POP UP
-
-  function showMore(idNumber, t, a, d, c){
-  var singlePlace;
-    for (var i = 0; i < allPlaces[i].places[j].length; i++) {
-
-      if (allPlaces[i].places[j].id === idNumber) {
-
-          singlePlace = allPlaces[i];
-          break;
-
-      }
-    }
-     document.getElementById('photo').src = 'images/'+ allPlaces[i].places.photo;
-     document.getElementById('name').innerText =  allPlaces[i].places.name;
-     document.getElementById('stars').src = 'images/'+ allPlaces[i].places.stars;
-     document.getElementById('description').innerHTML = allPlaces[i].places.description;
-     document.getElementById('amenities').innerText = allPlaces[i].places.amenities;
-     document.getElementById('location').innerText = allPlaces[i].places.location;
-     document.getElementById('address').innerText = allPlaces[i].places.address;
-     document.getElementById('nearby').innerHTML = '';
-      for (var i = 0; i < allPlaces[i].places.nearby.length; i++) {
-          document.getElementById('nearby').innerHTML += '<li class="list-inline-item">'+ allPlaces[i].places.nearby[i] +'</li>';
-      }
-     document.getElementById('price').innerText = allPlaces[i].places.price;
-
-    document.getElementById('accommPopUp').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-var accommThumbnails = document.getElementsByClassName('accommThumb');
-for (var i = 0; i < accommThumbnails.length; i++) {
-  var id = parseInt(accommThumbnails[i].dataset.id);
-  accommThumbnails[i].onclick = function(){
-    var id= parseInt(this.dataset.id);
-    showMore(id);
-  };
-}
-
-document.getElementById('close').onclick = function () {
-  document.getElementById('accomPopUp').style.display = 'none';
-  document.body.style.overflow = 'scroll';
-};

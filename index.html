@@ -174,28 +174,38 @@
 
 
     <!-- POP UP PAGE -->
-    <div id="accomPopUp" class="overlay">
-      <div class="overlayContent rounded pr-2">
-        <div class="row h-100">
+    <div id="accommPopUp" class="l-overlay">
+      <div class="l-overlay-content">
+        <div class="row">
           <div class="col-12 h-100">
-            <img id="photo" longdesc=""src="" class="h-100 img-fluid rounded-left" alt="">
+            <img id="photo" longdesc=""src="" class="img-fluid" alt="">
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 mr-2 ml-2 mb-2">
             <h2 id="name" class="text-left mt-4"></h2>
-            <img id="stars" longdesc=""src="" class="h-100 img-fluid" alt="">
+            <img id="stars" longdesc=""src="" class="pb-2 img-fluid" alt="">
+        </div>
+      </div>
+        <div class="row">
             <p id="description"></p>
+            <h4>Amenities</h4>
             <p id="amenities"></p>
-          </div>
+        </div>
+        </div>
+        <div class="row">
           <div class="col-12 col-lg-6">
+            <h4>Location</h4>
             <p id="location"></p>
+            <h4>Address</h4>
             <p id="address"></p>
+            <h4>Nearby</h4>
             <p id="nearby"></p>
-            <p id="price"></p>
+            <h3 id="price"></h3>
           </div>
+        </div>
           <div class="col-12 col-lg-6">
               <button type="button" id="reserve" class="btn btn-primary text-white">Reserve</button>
           </div>
-        </div>
+
         <div id="close">
           <i class="fas fa-times fa-2x"></i>
         </div>

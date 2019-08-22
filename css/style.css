@@ -7614,8 +7614,7 @@ h4 {
 p {
   font-family: 'IBM Plex Sans', sans-serif; }
 
-.hotelThumb:hover {
-  opacity: 0.5;
+.accomm-thumb:hover {
   cursor: pointer; }
 
 #close {
@@ -7630,7 +7629,7 @@ p {
   color: #333333;
   cursor: pointer; }
 
-.overlay {
+.l-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -7640,19 +7639,21 @@ p {
   display: none;
   /* display: flex; */
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 100000; }
 
 body, html {
   /* overflow: hidden; */ }
 
-.overlayContent {
-  width: 80vw;
+.l-overlay-content {
+  width: 60vw;
   max-height: 100vh;
   height: 100vh;
   background-color: white;
-  position: relative; }
+  position: absolute;
+  overflow: auto; }
 
-#roomImage {
+#photo {
   max-height: 100%; }
 
 #datePicker1 {

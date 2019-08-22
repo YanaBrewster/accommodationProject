@@ -1,7 +1,7 @@
 // POP UP
 
-.hotelThumb:hover{
-  opacity: 0.5;
+.accomm-thumb:hover{
+  // opacity: 0.5;
   cursor: pointer;
 }
 
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.overlay{
+.l-overlay{
   position: fixed;
   top: 0;
   left: 0;
@@ -30,20 +30,23 @@
   /* display: flex; */
   justify-content: center;
   align-items: center;
+  z-index: 100000;
 }
 
 body,html{
   /* overflow: hidden; */
 }
 
-.overlayContent{
-  width: 80vw;
+.l-overlay-content{
+  width: 60vw;
   max-height: 100vh;
   height: 100vh;
   background-color: white;
-  position: relative;
+  position: absolute;
+  overflow: auto;
+
 }
 
-#roomImage{
+#photo{
   max-height: 100%;
 }

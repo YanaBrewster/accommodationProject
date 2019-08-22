@@ -2,6 +2,7 @@ var placesCards = document.getElementById("placeDetails") ;
 var breakfastCards = document.getElementById("mealOption") ;
 var totalCost = document.getElementById("cost") ;
 
+
 // DATABASE/OBJECT
 
 var allPlaces = [
@@ -1204,7 +1205,7 @@ $(document).ready(function(){
              var total = d * allPlaces[i].places[j].price ;
 
              placesCards.innerHTML += "<div class=\"col-12 col-lg-4 col-sm-12 col-md-6 mb-2 mt-4\">" +
-             "<div class=\"border-primary card accommThumb h-100 mr-4 ml-4\">" +
+             "<div class=\"border-primary card accomm-thumb h-100 mr-4 ml-4\">" +
              "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
              "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-3\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"showMore("+ allPlaces[i].places[j].id +")\">View More</div>";
            }
@@ -1227,6 +1228,7 @@ $(document).ready(function(){
 
 function showMore(placeNumber){
 var singlePlace;
+
 console.log("place clicked");
 console.log(placeNumber);
   for (var i = 0; i < allPlaces.length; i++) {
@@ -1234,29 +1236,39 @@ console.log(placeNumber);
 
         if (allPlaces[i].places[j].id === placeNumber) {
           console.log(allPlaces[i].places[j].id);
-            singlePlace = allPlaces[i];
+            singlePlace = allPlaces[i].places[j];
             break;
       }
     }
   }
-   document.getElementById('photo').src = 'css/images/'+ singlePlace.places[j].photo;
-   document.getElementById('name').innerText =  singlePlace.places[j].name;
-   document.getElementById('stars').src = 'css/images/'+ singlePlace.places[j].stars;
-   document.getElementById('description').innerHTML = singlePlace.places[j].description;
-   document.getElementById('amenities').innerText = singlePlace.places[j].amenities;
-   document.getElementById('location').innerText = singlePlace.places[j].location;
-   document.getElementById('address').innerText = singlePlace.places[j].address;
-   document.getElementById('nearby').innerHTML = '';
-    for (var i = 0; i < singlePlace.places[j].nearby[i].length; i++) {
-        document.getElementById('nearby').innerHTML += '<li class="list-inline-item">'+ singlePlace.places[j].nearby[i] +'</li>';
-    }
-   document.getElementById('price').innerText = singlePlace.places[j].price;
 
-  document.getElementById('accommPopUp').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+   document.getElementById('photo').src = 'css/images/'+ singlePlace.photo;
+   document.getElementById('name').innerText =  singlePlace.name;
+   document.getElementById('stars').src = 'css/images/'+ singlePlace.stars;
+   document.getElementById('description').innerHTML = singlePlace.description;
+   document.getElementById('amenities').innerText = singlePlace.amenities;
+   document.getElementById('location').innerText = singlePlace.location;
+   document.getElementById('address').innerText = singlePlace.address;
+   document.getElementById('nearby').innerHTML = '';
+    for (var a = 0; a < singlePlace.nearby[a].length; a++) {
+      for (var b = 0; b < singlePlace.nearby[a].place[b].length; b++){
+        document.getElementById('nearby').innerHTML += '<li>' + singlePlace.nearby.place[b] + '</li>';
+      }
+    }
+   document.getElementById('price').innerHTML = "<p>$" + singlePlace.price + " per night</p>";
+
+   document.getElementById('accommPopUp').style.display = 'flex';
+   document.body.style.overflow = 'hidden';
+
+   document.getElementById('close').addEventListener('click',function(){
+    document.getElementById('accommPopUp').style.display = 'none';
+    document.body.style.overflow = 'scroll';
+  });
+
+
 }
 
-var accommThumbnails = document.getElementsByClassName('accommThumb');
+var accommThumbnails = document.getElementsByClassName('accomm-thumb');
 for (var i = 0; i < accommThumbnails.length; i++) {
 var id = parseInt(accommThumbnails[i].dataset.id);
 accommThumbnails[i].onclick = function(){
@@ -1266,7 +1278,7 @@ accommThumbnails[i].onclick = function(){
 }
 
 document.getElementById('close').onclick = function () {
-document.getElementById('accomPopUp').style.display = 'none';
+document.getElementById('accommPopUp').style.display = 'none';
 document.body.style.overflow = 'scroll';
 };
 

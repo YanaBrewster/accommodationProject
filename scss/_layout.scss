@@ -11,12 +11,19 @@
   top: 0;
   margin: 10px;
   color: $blue;
+  font-size: 0.75em;
   z-index: 100000000;
 }
 
 #close:hover{
-  color: $secondary;
+  color: white;
   cursor: pointer;
+}
+
+.close-banner{
+  height: 40px;
+  background-color: $secondary;
+  z-index: 10000;
 }
 
 .l-overlay{

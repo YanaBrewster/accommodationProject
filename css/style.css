@@ -7623,11 +7623,17 @@ p {
   top: 0;
   margin: 10px;
   color: #33CCFF;
+  font-size: 0.75em;
   z-index: 100000000; }
 
 #close:hover {
-  color: #333333;
+  color: white;
   cursor: pointer; }
+
+.close-banner {
+  height: 40px;
+  background-color: #333333;
+  z-index: 10000; }
 
 .l-overlay {
   position: fixed;

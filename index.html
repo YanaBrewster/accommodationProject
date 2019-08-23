@@ -50,15 +50,15 @@
             <div class="col-lg-4 col-sm-12 justify-content-center">
               <div class="form-group">
                 <div class=" text-dark bg-white border border-primary rounded">
-                <select class="form-control travellers" id="travellers">
-                  <option value="travellers">No. of travellers</option>
-                  <option value="1" class="trv1">1</option>
-                  <option value="2" class="trv2">2</option>
-                  <option value="3" class="trv3">3</option>
-                  <option value="4" class="trv4">4</option>
-                </select>
+                  <select class="form-control travellers" id="travellers">
+                    <option value="travellers">No. of travellers</option>
+                    <option value="1" class="trv1">1</option>
+                    <option value="2" class="trv2">2</option>
+                    <option value="3" class="trv3">3</option>
+                    <option value="4" class="trv4">4</option>
+                  </select>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <div class="row pt-1">
@@ -79,7 +79,7 @@
 
     <!-- RESULTS PAGE -->
     <div id="resultsPage">
-        <h3 class="text-center mt-4 mt-b">Search Results</h3>
+      <h3 class="text-center mt-4 mt-b">Search Results</h3>
       <div id="searchResults">
 
       </div>
@@ -177,34 +177,58 @@
     <div id="accommPopUp" class="l-overlay">
       <div class="l-overlay-content">
         <div class="row">
-          <div class="col-12 h-100">
-            <img id="photo" longdesc=""src="" class="img-fluid" alt="">
-          </div>
-          <div class="col-12 col-lg-6 mr-2 ml-2 mb-2">
-            <h2 id="name" class="text-left mt-4"></h2>
-            <img id="stars" longdesc=""src="" class="pb-2 img-fluid" alt="">
-        </div>
-      </div>
-        <div class="row">
-            <p id="description"></p>
-            <h4>Amenities</h4>
-            <p id="amenities"></p>
-        </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <h4>Location</h4>
-            <p id="location"></p>
-            <h4>Address</h4>
-            <p id="address"></p>
-            <h4>Nearby</h4>
-            <p id="nearby"></p>
-            <h3 id="price"></h3>
+          <div class="col-12 col-lg-12 pb-1">
+            <div class="close-banner">
+            </div>
+            <div class="owl-carousel owl-theme">
+              <div class="item">
+                <img id="photo1">
+              </div>
+              <div class="item">
+                <img id="photo2">
+              </div>
+            </div>
           </div>
         </div>
-          <div class="col-12 col-lg-6">
-              <button type="button" id="reserve" class="btn btn-primary text-white">Reserve</button>
+        <div class="pt-2 px-4 pb-4">
+          <div class="row">
+              <div class="col-12 col-lg-8">
+                <h3 id="name" class="text-left"></h3>
+              </div>
+              <div class="col-12 col-lg-4">
+                <img id="stars" class="img-fluid float-lg-right" alt="stars">
+              </div>
           </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 pt-4">
+              <p id="description"></p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h4>Location</h4>
+              <p id="location"></p>
+              <h4>Address</h4>
+              <p id="address"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h4>Amenities</h4>
+              <p id="amenities"></p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h4>Nearby</h4>
+              <ul id="nearby"></ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 pt-2">
+              <h3 id="price"></h3>
+            </div>
+            <div class="col-12 col-lg-6">
+              <button type="button" id="reserve" class="float-right btn-lg btn btn-primary text-white">Reserve</button>
+            </div>
+          </div>
+        </div>
 
         <div id="close">
           <i class="fas fa-times fa-2x"></i>
@@ -212,18 +236,22 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+  </div>
+</div>
 
-    <footer class="navbar bg-secondary justify-content-center mt-4">
-      <div class="navbar-brand text-white"><p>Supported by Tourism New Zealand</p></div>
-    </footer>
 
-    <script src="js/jquery-3.4.1.min.js"> </script>
-    <script src="plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"> </script>
-    <script src="js/script.js"></script>
+<!-- FOOTER -->
 
-  </body>
-  </html>
+<footer class="navbar bg-secondary justify-content-center mt-4">
+  <div class="navbar-brand text-white"><p>Supported by Tourism New Zealand</p></div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"> </script>
+<script src="plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"> </script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

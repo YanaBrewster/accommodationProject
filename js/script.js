@@ -1207,7 +1207,7 @@ $(document).ready(function(){
              placesCards.innerHTML += "<div class=\"col-12 col-lg-4 col-sm-12 col-md-6 mb-2 mt-4\">" +
              "<div class=\"border-primary card accomm-thumb h-100 mr-4 ml-4\">" +
              "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
-             "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-2\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block text-truncate\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"showMore("+ allPlaces[i].places[j].id +")\">Reserve</div>";
+             "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-2\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block text-truncate\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"calcCost(" + total + ", " + d +"), showMore("+ allPlaces[i].places[j].id +")\">Reserve</div>";
            }
          }
        }
@@ -1224,76 +1224,8 @@ $(document).ready(function(){
  }
 });
 
-// POP UP
-
-function showMore(placeNumber){
-var singlePlace;
-
-console.log("place clicked");
-console.log(placeNumber);
-  for (var i = 0; i < allPlaces.length; i++) {
-       for (var j = 0 ; j < allPlaces[i].places.length ; j ++) {
-
-        if (allPlaces[i].places[j].id === placeNumber) {
-          console.log(allPlaces[i].places[j].id);
-            singlePlace = allPlaces[i].places[j];
-            break;
-      }
-    }
-  }
-
-   document.getElementById('photo1').src = "css/images/" + singlePlace.photo;
-   document.getElementById('photo2').src = "css/images/" + singlePlace.thumbnail;
-   document.getElementById('name').innerText =  singlePlace.name;
-   document.getElementById('stars').src = 'css/images/'+ singlePlace.stars;
-   document.getElementById('description').innerHTML = singlePlace.description;
-   document.getElementById('amenities').innerText = singlePlace.amenities;
-   document.getElementById('location').innerText = singlePlace.location;
-   document.getElementById('address').innerText = singlePlace.address;
-   document.getElementById('nearby').innerHTML = '';
-
-    for (var a = 0; a < singlePlace.nearby.length; a ++) {
-      for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++){
-        // for (var c = 0; c < singlePlace.nearby[a].walk[c].length; c ++){
-        document.getElementById('nearby').innerHTML += '<li>' + singlePlace.nearby[a].place[b] + '</li>';
-        // '<li> ' +  singlePlace.nearby[a].walk[c] + ' walk</li>'
-      // }
-    }
-    }
-
-   document.getElementById('price').innerHTML = "<p>$" + singlePlace.price + " per night</p>";
-
-   document.getElementById('accommPopUp').style.display = 'flex';
-   document.body.style.overflow = 'hidden';
-
-   document.getElementById('close').addEventListener('click',function(){
-    document.getElementById('accommPopUp').style.display = 'none';
-    document.body.style.overflow = 'scroll';
-  });
 
 
-}
-
-var accommThumbnails = document.getElementsByClassName('accomm-thumb');
-for (var i = 0; i < accommThumbnails.length; i++) {
-var id = parseInt(accommThumbnails[i].dataset.id);
-accommThumbnails[i].onclick = function(){
-  var id= parseInt(this.dataset.id);
-  showMore(id);
-};
-}
-
-document.getElementById('close').onclick = function () {
-document.getElementById('accommPopUp').style.display = 'none';
-document.body.style.overflow = 'scroll';
-};
-
-
-  // CALCULATE COSTS AND DISPLAY IN JS
-
-  function calcCost (totalCost, days) {
-    document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " day/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
-  }
 
   // MEAL DATA/OBJECT IN JS
 
@@ -1415,7 +1347,7 @@ document.body.style.overflow = 'scroll';
         $("#checkoutPage").hide();
         $("#confirmedPage").hide();
 
-        $(".show-more").click(function(){
+        $("#reserve").click(function(){
           $("#resultsPage").hide();
           $("#checkoutPage").show();
           $("#confirmedPage").hide();
@@ -1427,6 +1359,7 @@ document.body.style.overflow = 'scroll';
         $("#confirm").click(function(){
           $("#resultsPage").hide();
           $("#checkoutPage").hide();
+          $("#accommPopUp").hide();
           $("#confirmedPage").show();
           $("#searchBar").hide();
           $("#slideshow").hide();
@@ -1455,3 +1388,85 @@ document.body.style.overflow = 'scroll';
     autoHeight:false,
     animateOut: "fadeOut"
   });
+
+  // POP UP
+
+  function showMore(placeNumber){
+  var singlePlace;
+
+  console.log("place clicked");
+  console.log(placeNumber);
+    for (var i = 0; i < allPlaces.length; i++) {
+         for (var j = 0 ; j < allPlaces[i].places.length ; j ++) {
+
+          if (allPlaces[i].places[j].id === placeNumber) {
+            console.log(allPlaces[i].places[j].id);
+              singlePlace = allPlaces[i].places[j];
+              break;
+        }
+      }
+    }
+
+     document.getElementById('photo1').src = "css/images/" + singlePlace.photo;
+     document.getElementById('photo2').src = "css/images/" + singlePlace.thumbnail;
+     document.getElementById('name').innerText =  singlePlace.name;
+     document.getElementById('stars').src = 'css/images/'+ singlePlace.stars;
+     document.getElementById('description').innerHTML = singlePlace.description;
+     document.getElementById('amenities').innerText = singlePlace.amenities;
+     document.getElementById('location').innerText = singlePlace.location;
+     document.getElementById('address').innerText = singlePlace.address;
+     document.getElementById('place').innerHTML = '';
+
+      for (var a = 0; a < singlePlace.nearby.length; a ++) {
+        for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++){
+          document.getElementById('place').innerHTML += '<li>' + singlePlace.nearby[a].place + '</li>';
+      }
+    };
+      // document.getElementById('walk').innerHTML = '';
+     //
+     //   for (var a = 0; a < singlePlace.nearby.length; a ++) {
+     //    for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++) {
+     //     for (var c = 0; c < singlePlace.nearby[a].place[b].walk[c].length; c ++){
+     //       document.getElementById('walk').innerHTML += '<li>' + singlePlace.nearby[d].place[b].walk + ' walk</li>';
+     //   }
+     // }
+     // };
+
+     document.getElementById('price').innerHTML = "<p>$" + singlePlace.price + " per night</p>";
+
+    document.getElementById('reserve').innerHTML = "<a class=\"float-lg-right btn-lg btn btn-primary text-white show-more mb-4\"'onclick='calcCost(" + totalCost + ", " + days +")'>Reserve</a></div>";
+
+     document.getElementById('accommPopUp').style.display = 'flex';
+     document.body.style.overflow = 'hidden';
+
+     document.getElementById('close').addEventListener('click',function(){
+      document.getElementById('accommPopUp').style.display = 'none';
+      document.body.style.overflow = 'scroll';
+
+    });
+
+    document.getElementById('reserve').addEventListener('click',function(){
+     document.getElementById('accommPopUp').style.display = 'none';
+     document.body.style.overflow = 'scroll';
+     window.scrollTo(500, 0);
+
+   });
+
+
+  }
+
+  var accommThumbnails = document.getElementsByClassName('accomm-thumb');
+  for (var i = 0; i < accommThumbnails.length; i++) {
+  var id = parseInt(accommThumbnails[i].dataset.id);
+  accommThumbnails[i].onclick = function(){
+    var id= parseInt(this.dataset.id);
+    showMore(id);
+  };
+  }
+
+
+    // CALCULATE COSTS AND DISPLAY IN JS
+
+    function calcCost (totalCost, days) {
+      document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " day/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
+    }

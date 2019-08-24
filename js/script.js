@@ -1231,8 +1231,8 @@ $(document).ready(function(){
 
   var breakfast = [
     {
-      name:  "Continential Breakfast",
-      description: "Juice, coffee or tea with museli and toast",
+      name:  "Continental Breakfast",
+      description: "Juice, coffee or tea with muesli and toast",
       image: "continentialbreakfast.jpg"
     },
     {

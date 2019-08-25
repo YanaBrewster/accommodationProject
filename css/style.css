@@ -7652,7 +7652,7 @@ body, html {
   /* overflow: hidden; */ }
 
 .l-overlay-content {
-  width: 60vw;
+  width: 80vw;
   max-height: 100vh;
   height: 100vh;
   background-color: white;

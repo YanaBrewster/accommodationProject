@@ -1416,21 +1416,14 @@ $(document).ready(function(){
      document.getElementById('location').innerText = singlePlace.location;
      document.getElementById('address').innerText = singlePlace.address;
      document.getElementById('place').innerHTML = '';
+    document.getElementById('walk').innerHTML = '';
 
       for (var a = 0; a < singlePlace.nearby.length; a ++) {
         for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++){
-          document.getElementById('place').innerHTML += '<li>' + singlePlace.nearby[a].place + '</li>';
-      }
-    };
-      // document.getElementById('walk').innerHTML = '';
-     //
-     //   for (var a = 0; a < singlePlace.nearby.length; a ++) {
-     //    for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++) {
-     //     for (var c = 0; c < singlePlace.nearby[a].place[b].walk[c].length; c ++){
-     //       document.getElementById('walk').innerHTML += '<li>' + singlePlace.nearby[d].place[b].walk + ' walk</li>';
-     //   }
-     // }
-     // };
+              document.getElementById('place').innerHTML += '<li>' + singlePlace.nearby[a].place + '</li>';
+              document.getElementById('walk').innerHTML += '<li>' + singlePlace.nearby[a].walk + ' m</li>';
+         }
+      };
 
      document.getElementById('price').innerHTML = "<p>$" + singlePlace.price + " per night</p>";
 

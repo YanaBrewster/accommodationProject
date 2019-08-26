@@ -7599,7 +7599,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 h1 {
   font-family: 'Damion', cursive;
-  font-size: 2.5em; }
+  font-size: 2.9em; }
 
 h2 {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -7662,6 +7662,13 @@ body, html {
 #photo {
   max-height: 100%; }
 
+.l-fern {
+  background-image: url("images/fern.png");
+  overflow: hidden;
+  width: 100vw;
+  background-position: center;
+  background-size: cover; }
+
 #datePicker1 {
   border-radius: 5px;
   border-color: #33CCFF; }
@@ -7789,6 +7796,9 @@ body, html {
   background: white;
   color: #000; }
 
+.errors {
+  color: red; }
+
 #datePicker1 {
   border-radius: 5px;
   border-color: #33CCFF; }
@@ -7915,5 +7925,8 @@ body, html {
 .ui-datepicker-unselectable .ui-state-default {
   background: white;
   color: #000; }
+
+.errors {
+  color: red; }
 
 /*# sourceMappingURL=style.css.map */

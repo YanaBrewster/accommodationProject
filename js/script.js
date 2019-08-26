@@ -1197,7 +1197,7 @@ $(document).ready(function(){
                 placesCards.innerHTML += "<div class=\"col-12 col-lg-4 col-sm-12 col-md-6 mb-2 mt-4\">" +
                 "<div class=\"border-primary card accomm-thumb h-100 mr-4 ml-4\">" +
                 "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
-                "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-2\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block text-truncate\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"calcCost(" + total + ", " + d +"), showMore("+ allPlaces[i].places[j].id +")\">Reserve</div>";
+                "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-2\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block text-truncate\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"calcCost(" + total + ", " + d +"), showMore("+ allPlaces[i].places[j].id +")\">View More</div>";
               }
             }
           }
@@ -1274,53 +1274,74 @@ $("#datePicker2").datepicker({
 });
 
 
-// CHECKOUT FORM VALIDATION IN JQUERY
+// CHECKOUT FORM VALIDATION IN JS
 
-function emailCheck(){
-  if($("#email").val()==""){
-    $("#email").addClass("is-invalid");
-    return false;
-  }else{
-    var regMail     =   /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
-    if(regMail.test($("#email").val()) == false){
-      $("#email").addClass("is-invalid");
-      return false;
-    }else{
-      $("#email").removeClass("is-invalid");
-      $("#next-form").collapse("show");
+window.onload = function() {
+  init();
+};
+
+function init() {
+  var submit = document.getElementById("bookingSubmit");
+  submit.onclick = function(evt) {
+    evt.preventDefault();
+    validateForm();
+  };
+
+  function validateForm() {
+    var checker = false;
+    var nameInput = document.getElementById("nameInput").value;
+    var emailInput = document.getElementById("emailInput").value;
+    var phoneInput = document.getElementById("phoneInput").value;
+
+    var emailError = document.getElementById("emailError");
+    var phoneError = document.getElementById("phoneError");
+    var nameError = document.getElementById("nameError");
+    var bookingSubmit  = document.getElementById("test");
+
+    // if(nameInput.length >= 6 || nameInput.length <= 30) {
+    //   nameError.innerHTML = "Correct!";
+    // }
+    //
+    // if(emailInput.length >= 6 || emailInput.length <= 30) {
+    //   emailError.innerHTML = "Correct";
+    // }
+    //
+    // if(phoneInput.length >= 6 || phoneInput.length <= 12) {
+    //   phoneError.innerHTML = "correct";
+    // }
+    // checker = true;
+
+
+      if (checker == false) {
+
+              if(nameInput.length <= 6 || nameInput.length >= 30) {
+                nameError.innerHTML = "*please enter either a shorter or longer name";
+              }
+
+              if(emailInput.length <= 6 || emailInput.length >= 30) {
+                emailError.innerHTML = "*please enter either a shorter or longer email address";
+              }
+
+              if(phoneInput.length <= 6 || phoneInput.length >= 12) {
+                phoneError.innerHTML = "*please enter a shorter or longer phone number";
+              }
+
+              if(nameInput == "") {
+                nameError.innerHTML = "*please enter a name";
+              }
+              if(emailInput == "") {
+                emailError.innerHTML = "*please enter an email address";
+              }
+              if(phoneInput == "") {
+                phoneError.innerHTML = "*please enter a phone number";
+              }
     }
+
 
   }
-}
-function validation(){
-  if($("#fullName, #phone").val()==""){
-    $("#fullName, #phone").addClass("is-invalid");
-    return false;
 
-  }else{
-    $("#fullName, #phone").removeClass("is-invalid");
-  }
 
-}
-$(document).ready(function() {
-  $("#fullName").on("keyup",function(){
-    if($("#fullName").val()==""){
-      $("#fullName").addClass("is-invalid");
-      return false;
-    }else{
-      $("#fullName").removeClass("is-invalid");
-    }
-  });
-  $("#phone").on("keyup",function(){
-    if($("#phone").val()==""){
-      $("#phone").addClass("is-invalid");
-      return false;
-    }else{
-      $("#phone").removeClass("is-invalid");
-    }
-  });
-
-});
+};
 
 // DISPLAY PAGES IN JQUERY
 
@@ -1343,17 +1364,15 @@ $(document).ready(function(){
         $("#searchBar").hide();
         $("#slideshow").hide();
         $("#slideshow").hide();
-        $(".googleMap").hide();
       });
-      $("#confirm").click(function(){
-        $("#resultsPage").hide();
-        $("#checkoutPage").hide();
-        $("#accommPopUp").hide();
-        $("#confirmedPage").show();
-        $("#searchBar").hide();
-        $("#slideshow").hide();
-        $(".googleMap").hide();
-      });
+      // $("#bookingSubmit").click(function(){
+      //   $("#resultsPage").hide();
+      //   $("#checkoutPage").hide();
+      //   $("#accommPopUp").hide();
+      //   $("#confirmedPage").show();
+      //   $("#searchBar").hide();
+      //   $("#slideshow").hide();
+      // });
       $("#home").click(function(){
         $("#searchBar").show();
         $("#slideshow").show();

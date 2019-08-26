@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-dark bg-primary justify-content-center">
+  <nav class="navbar navbar-dark bg-primary justify-content-center l-fern">
     <div class="navbar-brand mb-0"><h1>Kiwi Getaway</h1></div>
   </nav>
 
@@ -115,31 +115,30 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-sm-12 col-md-12 mt-4">
+            <div id="checkoutForm">
+
             <h3 class="mb-4">Make your booking</h3>
-            <form method="post" id="checkoutForm" onSubmit="return validation();">
-              <div class="form-group">
-                <div class="form-group">
-                  <label class="font-weight-bold">Full Name</label><br>
-                  <input type="text" name="name" id="fullName" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="Enter Full Name">
-                </div>
-                <label class="font-weight-bold">Email</label>
-                <div class="input-group mb-4">
-                  <input type="email" name="email" id="email" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="Enter Email Address">
-                  <div class="input-group-append"><button type="button" class="btn btn-primary" onClick="return emailCheck();"><i class="fa fa-envelope text-white"></i></button></div>
-                </div>
-                <div class="form-group">
-                  <label class="font-weight-bold">Phone Number</label><br>
-                  <input type="text" name="phone" id="phone" class="form-control col-lg-8 col-md-12 col-sm-12" placeholder="(000)-(0000000)">
-                </div>
-                <div class="form-group float-right">
-                  <input type="submit" name="submit" value="Confirm Booking"  class="btn btn-primary text-white">
-                </div>
+
+            <form id="contactForm">
+              <h5 class="mb-2">Full Name:</h5>
+              <input type="text" class="col-lg-8 col-md-12 col-sm-12 border border-primary rounded my-2" placeholder="Enter Full Name" id="nameInput"/>
+              <div id="nameError" class="errors"></div>
+              <h5>Email:</h5>
+              <input type="email" class="col-lg-8 col-md-12 col-sm-12 border border-primary rounded my-2" placeholder="Enter Email" id="emailInput"/>
+              <div id="emailError" class="errors"></div>
+              <h5>Phone Number:</h5>
+              <input type="number" class="col-lg-8 col-md-12 col-sm-12 border border-primary rounded my-2"  placeholder=" Enter Phone Number" id="phoneInput"></textarea>
+              <div id="phoneError" class="errors"></div>
+              <div class="float-right">
+                  <input type="submit" id="bookingSubmit" name="submit" value="Confirm Booking"  class="btn btn-primary text-white pt-2">
               </div>
             </form>
+            <p id="test"></p>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
     <!-- BOOKING CONFIRMED PAGE -->

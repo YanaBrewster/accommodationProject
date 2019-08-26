@@ -1274,7 +1274,7 @@ $("#datePicker2").datepicker({
 });
 
 
-// CHECKOUT FORM VALIDATION IN JS
+// BOOKING FORM VALIDATION IN JS
 
 window.onload = function() {
   init();
@@ -1288,7 +1288,7 @@ function init() {
   };
 
   function validateForm() {
-    var checker = false;
+
     var nameInput = document.getElementById("nameInput").value;
     var emailInput = document.getElementById("emailInput").value;
     var phoneInput = document.getElementById("phoneInput").value;
@@ -1296,51 +1296,37 @@ function init() {
     var emailError = document.getElementById("emailError");
     var phoneError = document.getElementById("phoneError");
     var nameError = document.getElementById("nameError");
-    var bookingSubmit  = document.getElementById("test");
+    var validated  = document.getElementById("bookingValid");
 
-    // if(nameInput.length >= 6 || nameInput.length <= 30) {
-    //   nameError.innerHTML = "Correct!";
-    // }
-    //
-    // if(emailInput.length >= 6 || emailInput.length <= 30) {
-    //   emailError.innerHTML = "Correct";
-    // }
-    //
-    // if(phoneInput.length >= 6 || phoneInput.length <= 12) {
-    //   phoneError.innerHTML = "correct";
-    // }
-    // checker = true;
+    var checker = false;
+            if(nameInput.length <= 6 || nameInput.length >= 30) {
+              nameError.innerHTML = "*please enter either a shorter or longer name";
+            }
 
+            if(emailInput.length <= 6 || emailInput.length >= 30) {
+              emailError.innerHTML = "*please enter either a shorter or longer email address";
+            }
 
-      if (checker == false) {
+            if(phoneInput.length <= 6 || phoneInput.length >= 12) {
+              phoneError.innerHTML = "*please enter a shorter or longer phone number";
+            }
 
-              if(nameInput.length <= 6 || nameInput.length >= 30) {
-                nameError.innerHTML = "*please enter either a shorter or longer name";
-              }
+            if(nameInput == "") {
+              nameError.innerHTML = "*please enter a name";
+            }
+            if(emailInput == "") {
+              emailError.innerHTML = "*please enter an email address";
+            }
+            if(phoneInput == "") {
+              phoneError.innerHTML = "*please enter a phone number";
+            } else {
 
-              if(emailInput.length <= 6 || emailInput.length >= 30) {
-                emailError.innerHTML = "*please enter either a shorter or longer email address";
-              }
-
-              if(phoneInput.length <= 6 || phoneInput.length >= 12) {
-                phoneError.innerHTML = "*please enter a shorter or longer phone number";
-              }
-
-              if(nameInput == "") {
-                nameError.innerHTML = "*please enter a name";
-              }
-              if(emailInput == "") {
-                emailError.innerHTML = "*please enter an email address";
-              }
-              if(phoneInput == "") {
-                phoneError.innerHTML = "*please enter a phone number";
-              }
-    }
-
+    $("#bookingSubmit").hide();
+    validated.innerHTML = "<a class=\"btn btn-primary text-white pt-2\">Confirm Booking</a>";
+    checker = true;
 
   }
-
-
+  }
 };
 
 // DISPLAY PAGES IN JQUERY
@@ -1365,14 +1351,14 @@ $(document).ready(function(){
         $("#slideshow").hide();
         $("#slideshow").hide();
       });
-      // $("#bookingSubmit").click(function(){
-      //   $("#resultsPage").hide();
-      //   $("#checkoutPage").hide();
-      //   $("#accommPopUp").hide();
-      //   $("#confirmedPage").show();
-      //   $("#searchBar").hide();
-      //   $("#slideshow").hide();
-      // });
+      $("#bookingValid").click(function(){
+        $("#resultsPage").hide();
+        $("#checkoutPage").hide();
+        $("#accommPopUp").hide();
+        $("#confirmedPage").show();
+        $("#searchBar").hide();
+        $("#slideshow").show();
+      });
       $("#home").click(function(){
         $("#searchBar").show();
         $("#slideshow").show();

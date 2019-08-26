@@ -81,7 +81,7 @@
       <h3 class="text-center mt-4 mt-b">Search Results</h3>
       <div id="searchResults">
       </div>
-      <div id="placeDetails" class="row equal">
+      <div id="placeDetails" class="row equal mb-5">
       </div>
     </div>
 
@@ -129,11 +129,12 @@
               <h5>Phone Number:</h5>
               <input type="number" class="col-lg-8 col-md-12 col-sm-12 border border-primary rounded my-2"  placeholder=" Enter Phone Number" id="phoneInput"></textarea>
               <div id="phoneError" class="errors"></div>
-              <div class="float-right">
+              <div class="float-right" >
                   <input type="submit" id="bookingSubmit" name="submit" value="Confirm Booking"  class="btn btn-primary text-white pt-2">
+                  <span id="bookingValid"></span>
               </div>
             </form>
-            <p id="test"></p>
+
             </div>
             </div>
           </div>
@@ -143,14 +144,14 @@
 
     <!-- BOOKING CONFIRMED PAGE -->
     <div id="confirmedPage">
-      <div class="container mr-2 ml-2">
+      <div class="container">
         <div>
-          <div class="mb-4 mt-4 pt-4 pb-4 col-12 col-sm-12 border border-primary rounded text-center">
+          <div class="mb-5 mt-5 pt-4 pb-4 col-12 col-sm-12 border border-primary rounded text-center">
             <h3 class="text-primary">Booking Confirmed</h3>
             <p>Thank you for booking your stay with us, we look forward to your visit.<br>You can pay for your room on arrival with eftpos or credit card.
-            </p>
-            <button type="button" id="home" class="btn btn-primary text-white">Make Another Booking</button>
-          </div>
+            </p><br>
+            <button type="button" id="home" class="btn btn-primary text-white ">Make Another Booking</button>
+          </div><br>
         </div>
       </div>
     </div>

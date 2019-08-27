@@ -1320,12 +1320,10 @@ function init() {
             if(phoneInput == "") {
               phoneError.innerHTML = "*please enter a phone number";
             } else {
-
-    $("#bookingSubmit").hide();
-    validated.innerHTML = "<a class=\"btn btn-primary text-white pt-2\">Confirm Booking</a>";
-    checker = true;
-
-  }
+              $("#bookingSubmit").hide();
+              validated.innerHTML = "<a class=\"btn btn-primary text-white pt-2\">Confirm Booking</a>";
+              checker = true;
+            }
   }
 };
 
@@ -1356,6 +1354,7 @@ $(document).ready(function(){
         $("#checkoutPage").hide();
         $("#accommPopUp").hide();
         $("#confirmedPage").show();
+        window.scrollTo(500, 0);
         $("#searchBar").hide();
         $("#slideshow").show();
       });
@@ -1451,5 +1450,5 @@ for (var i = 0; i < accommThumbnails.length; i++) {
 // CALCULATE COSTS AND DISPLAY IN JS
 
 function calcCost (totalCost, days) {
-  document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " day/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
+  document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " night/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
 }

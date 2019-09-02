@@ -1116,6 +1116,7 @@ var allPlaces = [
 var city, accommodation, travellers, days;
 
 $(document).ready(function(){
+
   // CITY
   $(".auckland").click(function(){
     city = "auckland";
@@ -1203,15 +1204,17 @@ $(document).ready(function(){
           }
         }
       }
-
     }
 
     // UNSUCCESSFUL VALIDATION
     if (checker == false){
 
-      $("#searchResults").html("<div class=\"col-12 text-center py-5\"><h4>Search was unsuccessful, we could not find accommodation that matches your search requirements.</h4></div>");
+      $("#searchResults").html("<div class=\"col-12 text-center py-5\"><h4>Search was unsuccessful, we could not find accommodation that matches your duration dates and/or the number of travellers selected.</h4></div>");
     }
   }
+
+  $(".owl-carousel").owlCarousel();
+
 });
 
 
@@ -1232,17 +1235,15 @@ var breakfast = [
 
 // SHOW MEAL OPTIONS IN JQUERY/JS
 
-$(document).ready(function(){
-
-  breakfastCards.innerHTML = " ";
-  var x;
-  for (x = 0 ; x < breakfast.length ; x ++) {
+breakfastCards.innerHTML = " ";
+var x;
+for (x = 0 ; x < breakfast.length ; x ++) {
 
 
-    breakfastCards.innerHTML += "<div class=\"col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mt-4\">" +
-    "<div class=\"border-primary card h-100\">" + "<div class=\"h-100\"><img src=\"css/images/" + breakfast[x].image + "\"class=\"card-img-top mb-2\" \"alt=\"breakfast option\">" + "<div class=\"card-body px-4\"><h4>" + breakfast[x].name + "</h4><br><p>" + breakfast[x].description + "</p> <div class=\" pb-4 float-right form-check\"><input class=\"form-check-input breakfast bg-primary\" type=\"radio\" name=\"breakfast\" value=\"option\"><label class=\"form-check-label\" for=\"breakfast\"></label></div></div>";
-  }
-});
+  breakfastCards.innerHTML += "<div class=\"col-12 col-sm-6 col-md-6 col-lg-3 mb-3 mt-4\">" +
+  "<div class=\"border-primary card h-100\">" + "<div class=\"h-100\"><img src=\"css/images/" + breakfast[x].image + "\"class=\"card-img-top mb-2\" \"alt=\"breakfast option\">" + "<div class=\"card-body px-4\"><h4>" + breakfast[x].name + "</h4><br><p>" + breakfast[x].description + "</p> <div class=\" pb-4 float-right form-check\"><input class=\"form-check-input breakfast bg-primary\" type=\"radio\" name=\"breakfast\" value=\"option\"><label class=\"form-check-label\" for=\"breakfast\"></label></div></div>";
+}
+
 
 
 // DATE PICKER FUNCTION IN JQUERY WITH JQUERY UI
@@ -1257,14 +1258,11 @@ $("#datePicker1").datepicker({
     var selectedDate = new Date(date);
     var msecsInADay = 86400000;
     var stDate = new Date(selectedDate.getTime() + msecsInADay);
-    console.log(stDate);
-
 
     $("#datePicker2").datepicker( "option", "minDate", stDate );
     var enDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
 
     $("#datePicker2").datepicker( "option", "maxDate", enDate );
-
   }
 });
 
@@ -1299,81 +1297,75 @@ function init() {
     var validated  = document.getElementById("bookingValid");
 
     var checker = false;
-            if(nameInput.length <= 6 || nameInput.length >= 30) {
-              nameError.innerHTML = "*please enter either a shorter or longer name";
-            }
+    if(nameInput.length <= 6 || nameInput.length >= 30) {
+      nameError.innerHTML = "*please enter either a shorter or longer name";
+    }
 
-            if(emailInput.length <= 6 || emailInput.length >= 30) {
-              emailError.innerHTML = "*please enter either a shorter or longer email address";
-            }
+    if(emailInput.length <= 6 || emailInput.length >= 30) {
+      emailError.innerHTML = "*please enter either a shorter or longer email address";
+    }
 
-            if(phoneInput.length <= 6 || phoneInput.length >= 12) {
-              phoneError.innerHTML = "*please enter a shorter or longer phone number";
-            }
+    if(phoneInput.length <= 6 || phoneInput.length >= 12) {
+      phoneError.innerHTML = "*please enter a shorter or longer phone number";
+    }
 
-            if(nameInput == "") {
-              nameError.innerHTML = "*please enter a name";
-            }
-            if(emailInput == "") {
-              emailError.innerHTML = "*please enter an email address";
-            }
-            if(phoneInput == "") {
-              phoneError.innerHTML = "*please enter a phone number";
-            } else {
-              $("#bookingSubmit").hide();
-              validated.innerHTML = "<a class=\"btn btn-primary text-white pt-2\">Confirm Booking</a>";
-              checker = true;
-            }
+    if(nameInput == "") {
+      nameError.innerHTML = "*please enter a name";
+    }
+    if(emailInput == "") {
+      emailError.innerHTML = "*please enter an email address";
+    }
+    if(phoneInput == "") {
+      phoneError.innerHTML = "*please enter a phone number";
+    } else {
+      $("#bookingSubmit").hide();
+      validated.innerHTML = "<a class=\"btn btn-primary text-white pt-2\">Confirm Booking</a>";
+      checker = true;
+    }
   }
 };
 
 // DISPLAY PAGES IN JQUERY
 
-$(document).ready(function(){
+$("#searchBar").ready(function(){
+  $("#checkoutPage").hide();
+  $("#confirmedPage").hide();
+  $("#resultsPage").hide();
 
-  $("#searchBar").ready(function(){
+  $("#search").click(function(){
+    $("#resultsPage").show();
     $("#checkoutPage").hide();
     $("#confirmedPage").hide();
-    $("#resultsPage").hide();
 
-    $("#search").click(function(){
-      $("#resultsPage").show();
+    $("#reserve").click(function(){
+      $("#resultsPage").hide();
+      $("#checkoutPage").show();
+      $("#confirmedPage").hide();
+      $("#searchBar").hide();
+      $("#slideshow").hide();
+      $("#slideshow").hide();
+    });
+    $("#bookingValid").click(function(){
+      $("#resultsPage").hide();
+      $("#checkoutPage").hide();
+      $("#accommPopUp").hide();
+      $("#confirmedPage").show();
+      window.scrollTo(500, 0);
+      $("#searchBar").hide();
+      $("#slideshow").show();
+    });
+    $("#home").click(function(){
+      $("#searchBar").show();
+      $("#slideshow").show();
+      $("#resultsPage").hide();
       $("#checkoutPage").hide();
       $("#confirmedPage").hide();
-
-      $("#reserve").click(function(){
-        $("#resultsPage").hide();
-        $("#checkoutPage").show();
-        $("#confirmedPage").hide();
-        $("#searchBar").hide();
-        $("#slideshow").hide();
-        $("#slideshow").hide();
-      });
-      $("#bookingValid").click(function(){
-        $("#resultsPage").hide();
-        $("#checkoutPage").hide();
-        $("#accommPopUp").hide();
-        $("#confirmedPage").show();
-        window.scrollTo(500, 0);
-        $("#searchBar").hide();
-        $("#slideshow").show();
-      });
-      $("#home").click(function(){
-        $("#searchBar").show();
-        $("#slideshow").show();
-        $("#resultsPage").hide();
-        $("#checkoutPage").hide();
-        $("#confirmedPage").hide();
-      });
     });
   });
 });
 
-// 3RD PARTY PLUGIN IN JQUERY
 
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+// 3RD PARTY PLUGIN IN JQUERY
 
 $(".owl-carousel").owlCarousel({
   items:1,
@@ -1409,12 +1401,12 @@ function showMore(placeNumber){
   document.getElementById("place").innerHTML = "";
   document.getElementById("walk").innerHTML = "";
 
-    for (var a = 0; a < singlePlace.nearby.length; a ++) {
-      for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++){
-        document.getElementById("place").innerHTML += "<li>" + singlePlace.nearby[a].place + "</li>";
-        document.getElementById("walk").innerHTML += "<li>" + singlePlace.nearby[a].walk + " m</li>";
-      }
-    };
+  for (var a = 0; a < singlePlace.nearby.length; a ++) {
+    for (var b = 0; b < singlePlace.nearby[a].place[b].length; b ++){
+      document.getElementById("place").innerHTML += "<li>" + singlePlace.nearby[a].place + "</li>";
+      document.getElementById("walk").innerHTML += "<li>" + singlePlace.nearby[a].walk + " m</li>";
+    }
+  };
 
   document.getElementById("price").innerHTML = "<p>$" + singlePlace.price + " per night</p>";
   document.getElementById("reserve").innerHTML = "<a class=\"float-lg-right btn-lg btn btn-primary text-white show-more mb-4\"'onclick='calcCost(" + totalCost + ", " + days +")'>Reserve</a></div>";

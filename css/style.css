@@ -7669,6 +7669,11 @@ body, html {
   background-position: center;
   background-size: cover; }
 
+#map {
+  height: 500px;
+  width: 100%;
+  background-color: #333333; }
+
 #datePicker1 {
   border-radius: 5px;
   border-color: #33CCFF; }

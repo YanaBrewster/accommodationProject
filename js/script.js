@@ -39,7 +39,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "QTExterior-Wellington.jpg",
-        photo: "QTRoom-Wellington.jpg"
+        photo: "QTRoom-Wellington.jpg",
+        lat: -41.291691,
+        lng: 174.782623
       },
       {
         id: 2,
@@ -71,7 +73,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "corpthorneExterior-Wellington.jpg",
-        photo: "corpthorneRoom-Wellington.jpg"
+        photo: "corpthorneRoom-Wellington.jpg",
+        lat: -41.29182,
+        lng: 174.7876
       },
       {
         id: 3,
@@ -103,7 +107,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "ibisExterior-Wellington.jpg",
-        photo: "ibisRoom-Wellington.jpg"
+        photo: "ibisRoom-Wellington.jpg",
+        lat: -41.28378,
+        lng: 174.7769
       },
       {
         id: 4,
@@ -135,7 +141,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "CopthorneHotelExterior-Auckland.jpg",
-        photo: "CopthorneHotelRoom-Auckland.jpg"
+        photo: "CopthorneHotelRoom-Auckland.jpg",
+        lat: -36.849603,
+        lng: 174.773486
       },
       {
         id: 5,
@@ -167,7 +175,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "rydgesExterior-Auckland.jpg",
-        photo: "rydgesRoom-Auckland.jpg"
+        photo: "rydgesRoom-Auckland.jpg",
+        lat: -36.847198,
+        lng: 174.762466
       },
       {
         id: 6,
@@ -199,7 +209,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "SKYCITYHotelAucklandExterior.jpg",
-        photo: "SKYCITYHotelAucklandRoom.jpg"
+        photo: "SKYCITYHotelAucklandRoom.jpg",
+        lat: -36.848217,
+        lng: 174.762569
       },
       {
         id: 7,
@@ -231,7 +243,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "HeartlandHotelQueenstownExterior.jpg",
-        photo: "HeartlandHotelQueenstownRoom.jpg"
+        photo: "HeartlandHotelQueenstownRoom.jpg",
+        lat: -45.032352,
+        lng: 168.664896
       },
       {
         id: 8,
@@ -263,7 +277,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "RydgesLakelandResortQueenstownExterior.jpg",
-        photo: "RydgesLakelandResortQueenstownRoom.jpg"
+        photo: "RydgesLakelandResortQueenstownRoom.jpg",
+        lat: -45.035072,
+        lng: 168.651911
       },
       {
         id: 9,
@@ -295,7 +311,9 @@ var allPlaces = [
         ],
         price: 157,
         thumbnail: "NovotelQueenstownLakesideExterior.jpg",
-        photo: "NovotelQueenstownLakesideroom.jpg"
+        photo: "NovotelQueenstownLakesideroom.jpg",
+        lat: -45.033196,
+        lng: 168.660871
       }
     ]
   },
@@ -332,7 +350,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "apolloMotelExterior-Wellington.jpg",
-        photo: "apolloMotelRoom-Wellington.jpg"
+        photo: "apolloMotelRoom-Wellington.jpg",
+        lat: -41.29473,
+        lng: 174.7866
       },
       {
         id: 11,
@@ -360,7 +380,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "capitalViewMotorInnExterior-Wellington.jpg",
-        photo: "capitalViewMotorInnRoom-Wellington.jpg"
+        photo: "capitalViewMotorInnRoom-Wellington.jpg",
+        lat: -41.29762,
+        lng: 174.77163
       },
       {
         id: 12,
@@ -392,7 +414,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "marksmenMotorInnExterior-Wellington.jpg",
-        photo: "marksmenMotorInnRoom-Wellington.jpg"
+        photo: "marksmenMotorInnRoom-Wellington.jpg",
+        lat: -41.300717,
+        lng: 174.778826
       },
 
       {
@@ -421,7 +445,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "GreenLaneMotelExterior-Auckland.jpg",
-        photo: "GreenLaneMotelRoom-Auckland.jpg"
+        photo: "GreenLaneMotelRoom-Auckland.jpg",
+        lat: -36.902981,
+        lng: 174.807383
       },
 
       {
@@ -454,7 +480,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "TudorCourtMotorLodgeExterior-Auckland.jpg",
-        photo: "TudorCourtMotorLodgeRoom-Auckland.jpg"
+        photo: "TudorCourtMotorLodgeRoom-Auckland.jpg",
+        lat: -36.879991,
+        lng: 174.783361
       },
       {
         id: 15,
@@ -486,7 +514,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "NewHavenMotelExterior-Auckland.jpg",
-        photo: "NewHavenMotelRoom-Auckland.jpg"
+        photo: "NewHavenMotelRoom-Auckland.jpg",
+        lat: -36.909159,
+        lng: 174.675319
       },
       {
         id: 16,
@@ -518,7 +548,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "AutolineMotelExterior.jpg",
-        photo: "AutolineMotelRoom.jpg"
+        photo: "AutolineMotelRoom.jpg",
+        lat: -45.032692,
+        lng: 168.670114
       },
       {
         id: 17,
@@ -550,7 +582,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "AmberLodgeMotelExterior.jpg",
-        photo: "AmberLodgeMotelRoom.jpg"
+        photo: "AmberLodgeMotelRoom.jpg",
+        lat: -45.029347,
+        lng: 168.662195
       },
       {
         id: 18,
@@ -582,7 +616,9 @@ var allPlaces = [
         ],
         price: 90,
         thumbnail: "ColonialVillageMotelQueenstownExterior.jpg",
-        photo: "ColonialVillageMotelQueenstownRoom.jpg"
+        photo: "ColonialVillageMotelQueenstownRoom.jpg",
+        lat: -45.033985,
+        lng: 168.676335
       }
     ]
   },
@@ -602,7 +638,7 @@ var allPlaces = [
         },
         amenities: ["Free Wi-fi", " Air Conditioning", " TV", " Washer & Dryer", " Children Welcome"],
         location: "Wellington",
-        address: "Thorndon, Wellington City, Wellington, New Zealand",
+        address: "Thorndon, Wellington City, Wellington",
         nearby: [
           {
             place: "Bus Stop",
@@ -619,7 +655,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "balconySuiteExterior-Wellington.jpg",
-        photo: "balconySuiteRoom-Wellington.jpg"
+        photo: "balconySuiteRoom-Wellington.jpg",
+        lat: -41.274540,
+        lng: 174.775631
       },
       {
         id: 20,
@@ -634,7 +672,7 @@ var allPlaces = [
         },
         amenities: ["Free-Wifi", " Air Conditioning", " No Smoking", " Children Welcome"],
         location: "Wellington",
-        address: "Northland, Wellington City, Wellington, New Zealand",
+        address: "Northland, Wellington City",
         nearby: [
           {
             place: "Iconic Kelburn village",
@@ -647,7 +685,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "cityfringetownhouseExterior-Wellington.jpg",
-        photo: "cityfringetownhouseRoom-Wellington.jpg"
+        photo: "cityfringetownhouseRoom-Wellington.jpg",
+        lat: -41.282339,
+        lng: 174.757356
       },
       {
         id: 21,
@@ -662,7 +702,7 @@ var allPlaces = [
         },
         amenities: ["Free Wi-fi", " Children Welcome"],
         location: "Wellington",
-        address: "Kilbirnie, Wellington",
+        address: "Kilbirnie, Wellington City",
         nearby: [
           {
             place: "Kilbirnie township",
@@ -671,7 +711,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "parkMewsExterior-Wellington.jpg",
-        photo: "parkMewsRoom-Wellington.jpg"
+        photo: "parkMewsRoom-Wellington.jpg",
+        lat: -41.316646,
+        lng: 174.798093
       },
       {
         id: 22,
@@ -686,7 +728,7 @@ var allPlaces = [
         },
         amenities: ["Free-Wifi", " Kitchen", " Lift", " Cable TV"],
         location: "Auckland",
-        address: "Queen St, Auckland",
+        address: "Queen Street, Auckland",
         nearby: [
           {
             place: "Britomart Train Station",
@@ -703,7 +745,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "JuanPlaceExterior-Auckland.jpg",
-        photo: "JuanPlaceRoom-Auckland.jpg"
+        photo: "JuanPlaceRoom-Auckland.jpg",
+        lat: -36.849941,
+        lng: 174.764938
       },
       {
         id: 23,
@@ -727,7 +771,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "HostedbyEveliinaExterior-Auckland.jpg",
-        photo: "HostedbyEveliinaRoom-Auckland.jpg"
+        photo: "HostedbyEveliinaRoom-Auckland.jpg",
+        lat: -36.849941,
+        lng: 174.764938
       },
       {
         id: 24,
@@ -751,7 +797,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "nadiaExterior-Auckland.jpg",
-        photo: "nadiaRoom-Auckland.jpg"
+        photo: "nadiaRoom-Auckland.jpg",
+        lat: -36.852095,
+        lng: 174.763180
       },
       {
         id: 25,
@@ -766,7 +814,7 @@ var allPlaces = [
         },
         amenities: ["Free-Wifi", " Air Conditioning", " Free Parking", " Iron"],
         location: "Queenstown",
-        address: "Queenstown, Otago, New Zealand",
+        address: "Queenstown, Otago",
         nearby: [
           {
             place: "Queenstown CBD",
@@ -779,7 +827,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "Shannon&MiaExterior.jpg",
-        photo: "Shannon&MiaRoom.JPG"
+        photo: "Shannon&MiaRoom.JPG",
+        lat: -45.031720,
+        lng: 168.660810
       },
       {
         id: 26,
@@ -794,7 +844,7 @@ var allPlaces = [
         },
         amenities: ["Free-Wifi", " Kitchen", " Iron", " Shampoo"],
         location: "Queenstown",
-        address: "Queenstown, Otago, New Zealand",
+        address: "Queenstown, Otago",
         nearby: [
           {
             place: "Queenstown Lake",
@@ -803,7 +853,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "SantoshExterior.jpg",
-        photo: "SantoshRoom.jpg"
+        photo: "SantoshRoom.jpg",
+        lat: -45.031720,
+        lng: 168.660810
       },
       {
         id: 27,
@@ -835,7 +887,9 @@ var allPlaces = [
         ],
         price: 240,
         thumbnail: "KatExterior.JPG",
-        photo: "KatRoom.JPG"
+        photo: "KatRoom.JPG",
+        lat: -45.038747,
+        lng: 168.637178
       },
     ]
   },
@@ -872,7 +926,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "yhaExterior-Wellington.jpg",
-        photo: "yhaRoom-Wellington.jpg"
+        photo: "yhaRoom-Wellington.jpg",
+        lat: -41.293099,
+        lng: 174.783913
       },
 
       {
@@ -901,7 +957,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "HotelWaterlooBackpackersExterior-Wellington.jpg",
-        photo: "HotelWaterlooBackpackersRoom-Wellington.jpg"
+        photo: "HotelWaterlooBackpackersRoom-Wellington.jpg",
+        lat: -41.280252,
+        lng: 174.779942
       },
       {
         id: 30,
@@ -933,7 +991,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "nomadsCapitalBackpackersExterior-Wellington.jpg",
-        photo: "nomadsCapitalBackpackersRoom-Wellington.jpg"
+        photo: "nomadsCapitalBackpackersRoom-Wellington.jpg",
+        lat: -41.289626,
+        lng: 174.776859
       },
       {
         id: 31,
@@ -961,7 +1021,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "HakaLodgeAucklandExterior.jpg",
-        photo: "HakaLodgeAucklandRoom.jpg"
+        photo: "HakaLodgeAucklandRoom.jpg",
+        lat: -36.857880,
+        lng: 174.756589
       },
       {
         id: 32,
@@ -989,7 +1051,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "ymcaExterior-Auckland.jpg",
-        photo: "ymcaRoom-Auckland.jpg"
+        photo: "ymcaRoom-Auckland.jpg",
+        lat: -36.856768,
+        lng: 174.758918
       },
       {
         id: 33,
@@ -1017,7 +1081,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "QueenStreetBackpackersExterior - Auckland.jpg",
-        photo: "QueenStreetBackpackersRoom- Auckland.jpg"
+        photo: "QueenStreetBackpackersRoom- Auckland.jpg",
+        lat: -36.845845,
+        lng: 174.766994
       },
       {
         id: 34,
@@ -1045,7 +1111,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "NomadsQueenstownBackpackersExterior.jpg",
-        photo: "NomadsQueenstownBackpackersRoom.jpg"
+        photo: "NomadsQueenstownBackpackersRoom.jpg",
+        lat: -45.032642,
+        lng: 168.661582
       },
       {
         id: 35,
@@ -1073,7 +1141,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "YHAQueenstownCentralExterior.jpg",
-        photo: "YHAQueenstownCentralRoom.jpg"
+        photo: "YHAQueenstownCentralRoom.jpg",
+        lat: -45.032031,
+        lng: 168.658956
       },
       {
         id: 36,
@@ -1105,7 +1175,9 @@ var allPlaces = [
         ],
         price: 30,
         thumbnail: "BaseQueenstownExterior.jpg",
-        photo: "BaseQueenstownRoom.jpg"
+        photo: "BaseQueenstownRoom.jpg",
+        lat: -45.032389,
+        lng: 168.657899
       }
     ]
   }
@@ -1329,6 +1401,7 @@ function init() {
 
 $("#searchBar").ready(function(){
   $("#checkoutPage").hide();
+  $("#slideshow").hide();
   $("#confirmedPage").hide();
   $("#resultsPage").hide();
 
@@ -1356,7 +1429,7 @@ $("#searchBar").ready(function(){
     });
     $("#home").click(function(){
       $("#searchBar").show();
-      $("#slideshow").show();
+      $("#slideshow").hide();
       $("#resultsPage").hide();
       $("#checkoutPage").hide();
       $("#confirmedPage").hide();
@@ -1444,3 +1517,127 @@ for (var i = 0; i < accommThumbnails.length; i++) {
 function calcCost (totalCost, days) {
   document.getElementById("cost").innerHTML = "<p>The total cost for your stay is $" + totalCost + " for " + days + " night/s. <br><br> <h4> Special Offer </h4> Choose one free breakfast option for your stay</p>";
 }
+
+// MAP
+
+var map;
+
+// DISPLAYING MAP AND STYLING
+
+function initMap(){
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -37.871578, lng: 175.303986},
+    zoom: 6,
+    // draggable: false,
+    // zoomControl: false,
+    // fullscreenControl: false,
+    scrollwheel: false,
+    styles: [
+      {
+        featureType: "water",
+        stylers: [
+          {"color": "#999999"}
+        ]
+      },
+      {
+        featureType: "administrative",
+        stylers: [
+          {"color": "white"}
+        ]
+      },
+      {
+        featureType: "landscape.man_made",
+        stylers: [
+          {"color": "#669999"}
+        ]
+      },
+      {
+        featureType: "landscape.natural",
+        stylers: [
+          {"color": "#669999"}
+        ]
+      },
+      {
+        featureType: "landscape.natural.landcover",
+        stylers: [
+          {"color": "#99cccc"}
+        ]
+      },
+      {
+        featureType: "landscape.natural.terrain",
+        stylers: [
+          {"color": "#99cccc"}
+        ]
+      },
+      {
+        featureType: "road",
+        stylers: [
+          {"color": "#33CCFF"}
+        ]
+      },
+      {
+        featureType: "poi.park",
+        stylers: [
+          {"color": "#99cccc"}
+        ]
+      },
+      {
+        featureType: "poi.attraction",
+        elementType: "labels.icon",
+        stylers: [
+          {"color":"#333333"}
+        ]
+      },
+    ]
+  });
+
+  // SHOW ALL LOCATIONS ON MAP AND CUSTOMISE MARKER
+
+  for (var e = 0; e < allPlaces.length; e++) {
+    for (var f = 0; f < allPlaces[e].places.length; f++) {
+      var marker = new google.maps.Marker({
+        position:{
+          lat: allPlaces[e].places[f].lat,
+          lng: allPlaces[e].places[f].lng
+        },
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: "css/images/markericon.png",
+        markerTitle: allPlaces[e].places[f].name,
+        markerLocation: allPlaces[e].places[f].address,
+        markerType: allPlaces[e].type,
+        markerID: allPlaces[e].places[f].id
+      });
+      addClickEventToMarker(marker);
+    }
+  }
+  // SHOW LOCATION INFORMATION ONCLICK
+
+  var infobox;
+
+  function addClickEventToMarker(singleMarker){
+
+    if (infobox){
+      infobox.close();
+    }
+
+    infobox = new google.maps.InfoWindow();
+    google.maps.event.addListener(singleMarker, "click", function(){
+
+      infobox.setContent("<div><h4>"+singleMarker.markerTitle+"</h4></div><div class=\"badge badge-primary text-white\"><h5>"+singleMarker.markerType+"</h5></div><div><p>Address: "+singleMarker.markerLocation+"</p></div>");
+      infobox.open(map, singleMarker);
+
+      for (var e = 0; e < allPlaces.length; e++){
+        for (var f = 0; f < allPlaces[e].places.length; f++) {
+          if (allPlaces[e].places[f].id === singleMarker.markerID){
+            var markerSingle = allPlaces[e];
+            break;
+          }
+        }
+      }
+
+    })
+
+  };
+}
+google.maps.event.addDomListener(window, "load", initMap);

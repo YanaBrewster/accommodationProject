@@ -1267,7 +1267,7 @@ $(document).ready(function(){
                 // SUCCESSFUL VALIDATION
                 var total = d * allPlaces[i].places[j].price ;
 
-                placesCards.innerHTML += "<div class=\"col-12 col-lg-4 col-sm-12 col-md-6 mb-2 mt-4\">" +
+                placesCards.innerHTML += "<div class=\"col-12 col-lg-3 col-sm-12 col-md-6 mb-2 mt-4\">" +
                 "<div class=\"border-primary card accomm-thumb h-100 mr-4 ml-4\">" +
                 "<div class=\"accomm-thumb h-100\" data-id=\"" + allPlaces[i].places[j].id +"\">" +
                 "<img src=\"css/images/" + allPlaces[i].places[j].thumbnail + "\"class=\"card-img-top\" alt=\"accommodation exterior\">" + "<div class=\"card-body px-4 mt-2\"><h4>" + allPlaces[i].places[j].name + "</h4><img src=\"css/images/" + allPlaces[i].places[j].stars + "\"><div class=\"pt-4 d-block text-truncate\">" +  allPlaces[i].places[j].description + "</div><h4 class=\"text-center mt-4\">$" + allPlaces[i].places[j].price + " per night </h4></div><div class=\"text-center mt-2\"><a class=\" btn-lg btn btn-primary text-white mb-4\" onclick=\"calcCost(" + total + ", " + d +"), showMore("+ allPlaces[i].places[j].id +")\">View More</div>";
@@ -1401,14 +1401,17 @@ function init() {
 
 $("#searchBar").ready(function(){
   $("#checkoutPage").hide();
-  $("#slideshow").hide();
+  // $("#map").hide();
+  // $("#slideshow").hide();
   $("#confirmedPage").hide();
   $("#resultsPage").hide();
+
 
   $("#search").click(function(){
     $("#resultsPage").show();
     $("#checkoutPage").hide();
     $("#confirmedPage").hide();
+    $("#slideshow").hide();
 
     $("#reserve").click(function(){
       $("#resultsPage").hide();
@@ -1416,7 +1419,7 @@ $("#searchBar").ready(function(){
       $("#confirmedPage").hide();
       $("#searchBar").hide();
       $("#slideshow").hide();
-      $("#slideshow").hide();
+      $("#map").hide();
     });
     $("#bookingValid").click(function(){
       $("#resultsPage").hide();
@@ -1426,6 +1429,7 @@ $("#searchBar").ready(function(){
       window.scrollTo(500, 0);
       $("#searchBar").hide();
       $("#slideshow").show();
+      $("#map").hide();
     });
     $("#home").click(function(){
       $("#searchBar").show();
@@ -1433,6 +1437,8 @@ $("#searchBar").ready(function(){
       $("#resultsPage").hide();
       $("#checkoutPage").hide();
       $("#confirmedPage").hide();
+      $("#slideshow").show();
+      $("#map").show();
     });
   });
 });
@@ -1524,69 +1530,111 @@ var map;
 
 // DISPLAYING MAP AND STYLING
 
-function initMap(){
+// // white
+//  #ffffff
+//  // primary
+// #33CCFF
+//$secondary
+// #333333
+// // black
+// #000000
+// // light gray
+//  #666666
+//  // dark green
+//  #336666
+//  // medium green
+//  #339999
+//  // light green
+//  #33cccc
+
+function initMap(getPlaces){
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {lat: -37.871578, lng: 175.303986},
-    zoom: 6,
+    center: {lat: -42.027300, lng: 172.718029},
+    zoom: 5,
     fullscreenControl: false,
+    streetViewControl: false,
+    mapTypeControl: false,
     scrollwheel: false,
     styles: [
-      {
-        featureType: "water",
-        stylers: [
-          {"color": "#999999"}
-        ]
-      },
-      {
-        featureType: "administrative",
-        stylers: [
-          {"color": "white"}
-        ]
-      },
-      {
-        featureType: "landscape.man_made",
-        stylers: [
-          {"color": "#669999"}
-        ]
-      },
-      {
-        featureType: "landscape.natural",
-        stylers: [
-          {"color": "#669999"}
-        ]
-      },
-      {
-        featureType: "landscape.natural.landcover",
-        stylers: [
-          {"color": "#99cccc"}
-        ]
-      },
-      {
-        featureType: "landscape.natural.terrain",
-        stylers: [
-          {"color": "#99cccc"}
-        ]
-      },
-      {
-        featureType: "road",
-        stylers: [
-          {"color": "#33CCFF"}
-        ]
-      },
-      {
-        featureType: "poi.park",
-        stylers: [
-          {"color": "#99cccc"}
-        ]
-      },
-      {
-        featureType: "poi.attraction",
-        elementType: "labels.icon",
-        stylers: [
-          {"color":"#333333"}
-        ]
-      },
-    ]
+            {elementType: "geometry", stylers: [{color: "#339999"}]},
+            {elementType: "labels.text.stroke", stylers: [{color: "#336666"}]},
+            {elementType: "labels.text.fill", stylers: [{color: "#ffffff"}]},
+            {
+              featureType: "administrative.locality",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "poi.park",
+              elementType: "geometry",
+              stylers: [{color: "#33cccc"}]
+            },
+            {
+              featureType: "poi.park",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [{color: "#33CCFF"}]
+            },
+            {
+              featureType: "road",
+              elementType: "geometry.stroke",
+              stylers: [{color: "#33CCFF"}]
+            },
+            {
+              featureType: "road",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry",
+              stylers: [{color: "#33CCFF"}]
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry.stroke",
+              stylers: [{color: "#336666"}]
+            },
+            {
+              featureType: "road.highway",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "transit",
+              elementType: "geometry",
+              stylers: [{color: "#336666"}]
+            },
+            {
+              featureType: "transit.station",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [{color: "#666666"}]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.fill",
+              stylers: [{color: "#ffffff"}]
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.stroke",
+              stylers: [{color: "#336666"}]
+            }
+          ]
   });
 
   // SHOW ALL LOCATIONS ON MAP AND CUSTOMISE MARKER
@@ -1602,9 +1650,15 @@ function initMap(){
         animation: google.maps.Animation.DROP,
         icon: "css/images/markericon.png",
         markerTitle: allPlaces[e].places[f].name,
+        markerDescription: allPlaces[e].places[f].description,
         markerLocation: allPlaces[e].places[f].address,
         markerType: allPlaces[e].type,
-        markerID: allPlaces[e].places[f].id
+        markerStars: allPlaces[e].places[f].stars,
+        markerID: allPlaces[e].places[f].id,
+        markerMinPeople: allPlaces[e].places[f].sleeps.minPeople,
+        markerMaxPeople: allPlaces[e].places[f].sleeps.maxPeople,
+        markerMinLength: allPlaces[e].places[f].sleeps.minLength,
+        markerMaxLength: allPlaces[e].places[f].sleeps.maxLength
       });
       addClickEventToMarker(marker);
     }
@@ -1622,7 +1676,7 @@ function initMap(){
     infobox = new google.maps.InfoWindow();
     google.maps.event.addListener(singleMarker, "click", function(){
 
-      infobox.setContent("<div><h4>"+singleMarker.markerTitle+"</h4></div><div class=\"badge badge-primary text-white\"><h5>"+singleMarker.markerType+"</h5></div><div><p>Address: "+singleMarker.markerLocation+"</p></div>");
+      infobox.setContent("<div><h3>" + singleMarker.markerTitle + "</h3><img src=\"css/images/" + singleMarker.markerStars + "\">  <span class=\"badge badge-secondary text-white\"><h5>" + singleMarker.markerType + "</h5></span></div><br><div><p>Sleeps " + singleMarker.markerMinPeople + " - " + singleMarker.markerMaxPeople + " people from " + singleMarker.markerMinLength + " to " + singleMarker.markerMaxLength + " nights.</p></div><div><p>" + singleMarker.markerDescription + "<p><div><div><p>Address: " + singleMarker.markerLocation + "</p></div>");
       infobox.open(map, singleMarker);
 
       for (var e = 0; e < allPlaces.length; e++){
@@ -1638,4 +1692,5 @@ function initMap(){
 
   };
 }
+
 google.maps.event.addDomListener(window, "load", initMap);

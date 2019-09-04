@@ -1,31 +1,5 @@
 // POP UP
 
-.accomm-thumb:hover{
-  // opacity: 0.5;
-  cursor: pointer;
-}
-
-#close{
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 10px;
-  color: $blue;
-  font-size: 0.75em;
-  z-index: 100000000;
-}
-
-#close:hover{
-  color: white;
-  cursor: pointer;
-}
-
-.close-banner{
-  height: 40px;
-  background-color: $secondary;
-  z-index: 10000;
-}
-
 .l-overlay{
   position: fixed;
   top: 0;
@@ -45,7 +19,7 @@ body,html{
 }
 
 .l-overlay-content{
-  width: 80vw;
+  width: 70vw;
   max-height: 100vh;
   height: 100vh;
   background-color: white;
@@ -54,24 +28,11 @@ body,html{
 
 }
 
-#photo{
-  max-height: 100%;
-}
-
 // HEADER NAV
 
 .l-fern {
   	background-image: url("images/fern.png");
     overflow: hidden;
-    width: 100vw;
     background-position: center;
     background-size: cover;
-}
-
-// MAP
-
-#map{
-  height:500px;
-  width: 100%;
-  background-color: $secondary;
 }

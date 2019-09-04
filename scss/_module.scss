@@ -1,21 +1,13 @@
-#datePicker1{
-  border-radius: 5px;
-  border-color: $blue;
-}
-
-#datePicker2{
-  border-radius: 5px;
-  border-color: $blue;
-}
+// BANNER
 
 .banner-search {
 	position: relative;
-	width: 100vw;
 	height: 60vh;
 	background-image: url("images/auckland.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 
@@ -44,6 +36,16 @@
 }
 
 // DATE PICKER
+
+#datePicker1{
+  border-radius: 5px;
+  border-color: $blue;
+}
+
+#datePicker2{
+  border-radius: 5px;
+  border-color: $blue;
+}
 
 .ui-datepicker {
     width: 305px;
@@ -129,7 +131,6 @@
       margin: 1px;
       height:35px;
       width:35px;
-
 }
 
 .ui-datepicker-calendar .ui-state-hover {
@@ -157,4 +158,43 @@
 
 .errors {
 	color: red;
+}
+
+// POP UP
+
+.accomm-thumb:hover{
+  cursor: pointer;
+}
+
+#close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  color: $blue;
+  font-size: 0.75em;
+  z-index: 100000000;
+}
+
+#close:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.close-banner{
+  height: 40px;
+  background-color: $secondary;
+  z-index: 10000;
+}
+
+#photo{
+  max-height: 100%;
+}
+
+// MAP
+
+#map{
+  height:500px;
+  width: 100%;
+  background-color: $secondary;
 }
